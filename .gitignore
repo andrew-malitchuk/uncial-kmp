@@ -1,0 +1,32 @@
+# Build output
+build/
+.gradle/
+.kotlin/
+local.properties
+
+# Language data is downloaded into build/ by :sdk:lang-*:downloadLanguageData, so it is
+# already covered by the build/ rule above -- never commit the 7.9 MB of ukr+eng.
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# Xcode
+*.xcworkspace/xcuserdata/
+xcuserdata/
+*.xcuserstate
+DerivedData/
+samples/ios-app/**/Pods/
+
+# MkDocs
+# The rendered site is build output. Deploy publishes it to the gh-pages branch
+# (`mkdocs gh-deploy`), so there is no reason to carry a second copy here.
+site/
+
+# Signing and publishing credentials
+# configure/signing/ holds secrets.properties (GPG private key, Central Portal token) and
+# the release guide. The guide is worth reading but not worth leaking alongside the key,
+# so the whole directory stays out of git -- same rule as axiom-sdk.
+/configure/signing/*
+**/secrets.properties

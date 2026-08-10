@@ -1,0 +1,105 @@
+# Single source of truth for every version in the build.
+# Verified against Maven Central / Google Maven on 2026-09-07.
+[versions]
+# ── Toolchain ──
+kotlin = "2.4.20"
+# Pinned to what Android Studio supports: the IDE refuses to sync a project on a
+# newer AGP than it knows ("Latest supported version is AGP 9.3.0"), even though the
+# command line builds it fine. Raise this only together with the IDE.
+agp = "9.3.0"
+# AGP 9.x requires JDK 17+; we compile on 21 and target 11 so consumers on
+# Java 11 can still use the JVM artifact.
+jdk = "21"
+jvmTarget = "11"
+
+# ── Android ──
+# The SDK modules stay on 36 deliberately: compileSdk propagates to consumers
+# through AAR metadata, and forcing everyone onto 37 to satisfy a sample would be
+# a poor trade. The sample overrides this for itself.
+android-compileSdk = "36"
+android-sampleCompileSdk = "37"
+android-minSdk = "24"
+
+# ── Runtime libraries ──
+coroutines = "1.11.0"
+
+# ── Engines / rasterizers ──
+# JVM: PDFBox rasterizes, Tess4J binds to the SYSTEM libtesseract (see README).
+pdfbox = "3.0.8"
+tess4j = "5.20.0"
+# JNA is how the JVM engine reaches libtesseract; declared explicitly rather than
+# inherited from tess4j, because Uncial calls the C API itself.
+jna = "5.19.1"
+# Android: PdfRenderer is framework; Tesseract4Android bundles libtesseract.so.
+# NOTE: JitPack-only artifact — see settings.gradle.kts for the filtered repo.
+tesseract4android = "4.8.0"
+# Android digital-text path (:sdk:pdf-text) — heavy, deliberately optional.
+pdfbox-android = "2.0.27.0"
+
+# ── AndroidX ──
+androidx-startup = "1.2.0"
+androidx-annotation = "1.10.0"
+androidx-core = "1.18.0"
+androidx-activity = "1.13.0"
+# Compose is used by the Android sample only. The SDK itself has no UI dependency
+# and must never grow one -- that is what keeps the Fat AAR and the XCFramework
+# small and free of version conflicts. (PLAN.md §12)
+androidx-composeBom = "2026.08.00"
+androidx-lifecycleCompose = "2.11.0"
+
+# ── Test ──
+turbine = "1.2.1"
+
+# ── Publishing / docs (wired now, used in phase 5) ──
+vanniktech-publish = "0.37.0"
+# The Central Portal uploader. vanniktech handles publications, POMs and signing, but its
+# own uploader reads credentials only through providers.gradleProperty -- which cannot see
+# configure/signing/secrets.properties. nmcp takes them as plain properties instead, and
+# aggregates all 12 modules into a single deployment. (PUBLISHING.md §A1)
+#
+# Pinned to 0.0.9, which is also what axiom-sdk publishes with. 0.1.0 is broken on Maven
+# Central: it declares a dependency on gratatouille-runtime 0.0.6-SNAPSHOT-b6a9df6..., which
+# was never published, so resolving the plugin fails outright.
+nmcp = "0.0.9"
+dokka = "2.2.0"
+
+[libraries]
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+
+pdfbox = { module = "org.apache.pdfbox:pdfbox", version.ref = "pdfbox" }
+tess4j = { module = "net.sourceforge.tess4j:tess4j", version.ref = "tess4j" }
+jna = { module = "net.java.dev.jna:jna", version.ref = "jna" }
+tesseract4android = { module = "com.github.adaptech-cz.Tesseract4Android:tesseract4android", version.ref = "tesseract4android" }
+pdfbox-android = { module = "com.tom-roush:pdfbox-android", version.ref = "pdfbox-android" }
+
+androidx-startup = { module = "androidx.startup:startup-runtime", version.ref = "androidx-startup" }
+androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "androidx-annotation" }
+androidx-core = { module = "androidx.core:core", version.ref = "androidx-core" }
+androidx-activity = { module = "androidx.activity:activity", version.ref = "androidx-activity" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "androidx-activity" }
+androidx-lifecycle-runtimeCompose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycleCompose" }
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycleCompose" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-composeBom" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-toolingPreview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+
+# Referenced from build-logic so convention plugins can apply them by artifact.
+plugin-kotlin-multiplatform = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+plugin-android = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+plugin-vanniktech-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "vanniktech-publish" }
+plugin-nmcp = { module = "com.gradleup.nmcp:nmcp", version.ref = "nmcp" }
+
+[plugins]
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+androidKmpLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+vanniktechPublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-publish" }

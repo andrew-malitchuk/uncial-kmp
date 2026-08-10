@@ -1,0 +1,58 @@
+Uncial
+Copyright 2026 Andrew Malitchuk
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This product depends on, and in the case of the language-data artifacts
+redistributes, software from the following projects.
+
+--------------------------------------------------------------------------------
+Tesseract OCR
+  https://github.com/tesseract-ocr/tesseract
+  Copyright Google Inc. and contributors
+  Apache License, Version 2.0
+
+  Reached on Android through Tesseract4Android
+  (https://github.com/adaptech-cz/Tesseract4Android, Apache-2.0), and on the JVM
+  through a system libtesseract via Tess4J
+  (https://github.com/nguyenq/tess4j, Apache-2.0). Neither binary is redistributed
+  by this project; Tesseract4Android is an ordinary dependency.
+
+--------------------------------------------------------------------------------
+Leptonica
+  http://www.leptonica.org/
+  Copyright Dan S. Bloomberg
+  BSD 2-Clause License
+
+  Bundled inside Tesseract4Android's native libraries.
+
+--------------------------------------------------------------------------------
+tessdata_fast language models
+  https://github.com/tesseract-ocr/tessdata_fast
+  Copyright Google Inc. and contributors
+  Apache License, Version 2.0
+
+  REDISTRIBUTED. The artifacts uncial-lang-ukr and uncial-lang-eng each package
+  one unmodified .traineddata file from tessdata_fast, downloaded and
+  checksum-verified at build time. No model is trained, altered or derived by
+  this project.
+
+--------------------------------------------------------------------------------
+Apache PDFBox
+  https://pdfbox.apache.org/
+  Copyright The Apache Software Foundation
+  Apache License, Version 2.0
+
+  Used by the JVM rasterizer and by the JVM digital-text path.
+
+--------------------------------------------------------------------------------
+PDFBox-Android
+  https://github.com/TomRoush/PdfBox-Android
+  Copyright Tom Roush
+  Apache License, Version 2.0
+
+  Used by the Android digital-text path (uncial-pdf-text).
+
+--------------------------------------------------------------------------------
+Apple Vision and PDFKit on iOS, and android.graphics.pdf.PdfRenderer on Android,
+are operating-system frameworks. Nothing from them is redistributed here.
