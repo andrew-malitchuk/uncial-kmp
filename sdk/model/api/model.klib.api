@@ -1,0 +1,423 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-model>
+final enum class io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation : kotlin/Enum<io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation> { // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation|null[0]
+    enum entry Down // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.Down|null[0]
+    enum entry Left // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.Left|null[0]
+    enum entry Right // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.Right|null[0]
+    enum entry Up // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.Up|null[0]
+
+    final val degrees // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.degrees|{}degrees[0]
+        final fun <get-degrees>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.degrees.<get-degrees>|<get-degrees>(){}[0]
+    final val entries // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation> // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation> // io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation.values|values#static(){}[0]
+}
+
+final enum class io.github.andrewmalitchuk.uncial.model.source.options/RasterColor : kotlin/Enum<io.github.andrewmalitchuk.uncial.model.source.options/RasterColor> { // io.github.andrewmalitchuk.uncial.model.source.options/RasterColor|null[0]
+    enum entry Color // io.github.andrewmalitchuk.uncial.model.source.options/RasterColor.Color|null[0]
+    enum entry Grayscale // io.github.andrewmalitchuk.uncial.model.source.options/RasterColor.Grayscale|null[0]
+
+    final val entries // io.github.andrewmalitchuk.uncial.model.source.options/RasterColor.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.andrewmalitchuk.uncial.model.source.options/RasterColor> // io.github.andrewmalitchuk.uncial.model.source.options/RasterColor.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.andrewmalitchuk.uncial.model.source.options/RasterColor // io.github.andrewmalitchuk.uncial.model.source.options/RasterColor.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.andrewmalitchuk.uncial.model.source.options/RasterColor> // io.github.andrewmalitchuk.uncial.model.source.options/RasterColor.values|values#static(){}[0]
+}
+
+final enum class io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality : kotlin/Enum<io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality> { // io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality|null[0]
+    enum entry Accurate // io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality.Accurate|null[0]
+    enum entry Fast // io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality.Fast|null[0]
+
+    final val entries // io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality> // io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality // io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality> // io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality.values|values#static(){}[0]
+}
+
+final enum class io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource : kotlin/Enum<io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource> { // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource|null[0]
+    enum entry DigitalTextLayer // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.DigitalTextLayer|null[0]
+    enum entry Mixed // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.Mixed|null[0]
+    enum entry Ocr // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.Ocr|null[0]
+
+    final val entries // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource> // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource> // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.values|values#static(){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.Companion|null[0]
+        final fun of(kotlin.collections/Iterable<io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource>): io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource // io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource.Companion.of|of(kotlin.collections.Iterable<io.github.andrewmalitchuk.uncial.model.source.text.ExtractionSource>){}[0]
+    }
+}
+
+final enum class io.github.andrewmalitchuk.uncial.model.source.text/TextScript : kotlin/Enum<io.github.andrewmalitchuk.uncial.model.source.text/TextScript> { // io.github.andrewmalitchuk.uncial.model.source.text/TextScript|null[0]
+    enum entry Cyrillic // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.Cyrillic|null[0]
+    enum entry Latin // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.Latin|null[0]
+    enum entry Mixed // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.Mixed|null[0]
+    enum entry Unknown // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.Unknown|null[0]
+
+    final val entries // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.andrewmalitchuk.uncial.model.source.text/TextScript> // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.andrewmalitchuk.uncial.model.source.text/TextScript // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.andrewmalitchuk.uncial.model.source.text/TextScript> // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.values|values#static(){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.Companion|null[0]
+        final fun of(kotlin/String): io.github.andrewmalitchuk.uncial.model.source.text/TextScript // io.github.andrewmalitchuk.uncial.model.source.text/TextScript.Companion.of|of(kotlin.String){}[0]
+    }
+}
+
+sealed interface io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock { // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock|null[0]
+    abstract val text // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.text|{}text[0]
+        abstract fun <get-text>(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.text.<get-text>|<get-text>(){}[0]
+
+    final class Heading : io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock { // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading|null[0]
+        constructor <init>(kotlin/Int, kotlin/String) // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.<init>|<init>(kotlin.Int;kotlin.String){}[0]
+
+        final val level // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.level|{}level[0]
+            final fun <get-level>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.level.<get-level>|<get-level>(){}[0]
+        final val text // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.component1|component1(){}[0]
+        final fun component2(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.component2|component2(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin/String = ...): io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.copy|copy(kotlin.Int;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Heading.toString|toString(){}[0]
+    }
+
+    final class Paragraph : io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock { // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph|null[0]
+        constructor <init>(kotlin/String) // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph.<init>|<init>(kotlin.String){}[0]
+
+        final val text // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock.Paragraph.toString|toString(){}[0]
+    }
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox { // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox|null[0]
+    constructor <init>(kotlin/Float, kotlin/Float, kotlin/Float, kotlin/Float) // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.<init>|<init>(kotlin.Float;kotlin.Float;kotlin.Float;kotlin.Float){}[0]
+
+    final val area // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.area|{}area[0]
+        final fun <get-area>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.area.<get-area>|<get-area>(){}[0]
+    final val bottom // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.bottom|{}bottom[0]
+        final fun <get-bottom>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.bottom.<get-bottom>|<get-bottom>(){}[0]
+    final val center // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.center|{}center[0]
+        final fun <get-center>(): io.github.andrewmalitchuk.uncial.model.source.geometry/Point // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.center.<get-center>|<get-center>(){}[0]
+    final val height // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.height|{}height[0]
+        final fun <get-height>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.height.<get-height>|<get-height>(){}[0]
+    final val left // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.left|{}left[0]
+        final fun <get-left>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.left.<get-left>|<get-left>(){}[0]
+    final val right // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.right|{}right[0]
+        final fun <get-right>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.right.<get-right>|<get-right>(){}[0]
+    final val top // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.top|{}top[0]
+        final fun <get-top>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.top.<get-top>|<get-top>(){}[0]
+    final val width // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.width|{}width[0]
+        final fun <get-width>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.width.<get-width>|<get-width>(){}[0]
+
+    final fun component1(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.component1|component1(){}[0]
+    final fun component2(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.component2|component2(){}[0]
+    final fun component3(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.component3|component3(){}[0]
+    final fun component4(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.component4|component4(){}[0]
+    final fun copy(kotlin/Float = ..., kotlin/Float = ..., kotlin/Float = ..., kotlin/Float = ...): io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.copy|copy(kotlin.Float;kotlin.Float;kotlin.Float;kotlin.Float){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.toString|toString(){}[0]
+    final fun union(io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox): io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.union|union(io.github.andrewmalitchuk.uncial.model.source.geometry.BoundingBox){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.Companion|null[0]
+        final val Zero // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.Companion.Zero|{}Zero[0]
+            final fun <get-Zero>(): io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox // io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox.Companion.Zero.<get-Zero>|<get-Zero>(){}[0]
+    }
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.geometry/Point { // io.github.andrewmalitchuk.uncial.model.source.geometry/Point|null[0]
+    constructor <init>(kotlin/Float, kotlin/Float) // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.<init>|<init>(kotlin.Float;kotlin.Float){}[0]
+
+    final val x // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.x|{}x[0]
+        final fun <get-x>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.x.<get-x>|<get-x>(){}[0]
+    final val y // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.y|{}y[0]
+        final fun <get-y>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.y.<get-y>|<get-y>(){}[0]
+
+    final fun component1(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.component1|component1(){}[0]
+    final fun component2(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.component2|component2(){}[0]
+    final fun copy(kotlin/Float = ..., kotlin/Float = ...): io.github.andrewmalitchuk.uncial.model.source.geometry/Point // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.copy|copy(kotlin.Float;kotlin.Float){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.geometry/Point.toString|toString(){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.geometry/Size { // io.github.andrewmalitchuk.uncial.model.source.geometry/Size|null[0]
+    constructor <init>(kotlin/Float, kotlin/Float) // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.<init>|<init>(kotlin.Float;kotlin.Float){}[0]
+
+    final val height // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.height|{}height[0]
+        final fun <get-height>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.height.<get-height>|<get-height>(){}[0]
+    final val isEmpty // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.isEmpty|{}isEmpty[0]
+        final fun <get-isEmpty>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.isEmpty.<get-isEmpty>|<get-isEmpty>(){}[0]
+    final val width // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.width|{}width[0]
+        final fun <get-width>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.width.<get-width>|<get-width>(){}[0]
+
+    final fun component1(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.component1|component1(){}[0]
+    final fun component2(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.component2|component2(){}[0]
+    final fun copy(kotlin/Float = ..., kotlin/Float = ...): io.github.andrewmalitchuk.uncial.model.source.geometry/Size // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.copy|copy(kotlin.Float;kotlin.Float){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.geometry/Size.toString|toString(){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage { // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage|null[0]
+    final val bcp47 // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.bcp47|{}bcp47[0]
+        final fun <get-bcp47>(): kotlin/String? // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.bcp47.<get-bcp47>|<get-bcp47>(){}[0]
+    final val tesseractCode // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.tesseractCode|{}tesseractCode[0]
+        final fun <get-tesseractCode>(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.tesseractCode.<get-tesseractCode>|<get-tesseractCode>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.toString|toString(){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.Companion|null[0]
+        final val Default // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.Companion.Default|{}Default[0]
+            final fun <get-Default>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.Companion.Default.<get-Default>|<get-Default>(){}[0]
+        final val English // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.Companion.English|{}English[0]
+            final fun <get-English>(): io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.Companion.English.<get-English>|<get-English>(){}[0]
+        final val Ukrainian // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.Companion.Ukrainian|{}Ukrainian[0]
+            final fun <get-Ukrainian>(): io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.Companion.Ukrainian.<get-Ukrainian>|<get-Ukrainian>(){}[0]
+
+        final fun custom(kotlin/String, kotlin/String? = ...): io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage // io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage.Companion.custom|custom(kotlin.String;kotlin.String?){}[0]
+    }
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions { // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions|null[0]
+    constructor <init>(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> = ..., kotlin/Int = ..., kotlin/Int = ..., kotlin/Boolean = ..., io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality = ..., io.github.andrewmalitchuk.uncial.model.source.options/RasterColor = ..., kotlin/Boolean = ..., kotlin.ranges/IntRange? = ...) // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.<init>|<init>(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>;kotlin.Int;kotlin.Int;kotlin.Boolean;io.github.andrewmalitchuk.uncial.model.source.options.RecognitionQuality;io.github.andrewmalitchuk.uncial.model.source.options.RasterColor;kotlin.Boolean;kotlin.ranges.IntRange?){}[0]
+
+    final val includeWords // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.includeWords|{}includeWords[0]
+        final fun <get-includeWords>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.includeWords.<get-includeWords>|<get-includeWords>(){}[0]
+    final val languages // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.languages|{}languages[0]
+        final fun <get-languages>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.languages.<get-languages>|<get-languages>(){}[0]
+    final val maxPageSide // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.maxPageSide|{}maxPageSide[0]
+        final fun <get-maxPageSide>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.maxPageSide.<get-maxPageSide>|<get-maxPageSide>(){}[0]
+    final val pageRange // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.pageRange|{}pageRange[0]
+        final fun <get-pageRange>(): kotlin.ranges/IntRange? // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.pageRange.<get-pageRange>|<get-pageRange>(){}[0]
+    final val preferDigitalLayer // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.preferDigitalLayer|{}preferDigitalLayer[0]
+        final fun <get-preferDigitalLayer>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.preferDigitalLayer.<get-preferDigitalLayer>|<get-preferDigitalLayer>(){}[0]
+    final val rasterColor // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.rasterColor|{}rasterColor[0]
+        final fun <get-rasterColor>(): io.github.andrewmalitchuk.uncial.model.source.options/RasterColor // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.rasterColor.<get-rasterColor>|<get-rasterColor>(){}[0]
+    final val recognitionQuality // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.recognitionQuality|{}recognitionQuality[0]
+        final fun <get-recognitionQuality>(): io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.recognitionQuality.<get-recognitionQuality>|<get-recognitionQuality>(){}[0]
+    final val renderDpi // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.renderDpi|{}renderDpi[0]
+        final fun <get-renderDpi>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.renderDpi.<get-renderDpi>|<get-renderDpi>(){}[0]
+    final val renderScale // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.renderScale|{}renderScale[0]
+        final fun <get-renderScale>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.renderScale.<get-renderScale>|<get-renderScale>(){}[0]
+
+    final fun component1(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.component1|component1(){}[0]
+    final fun component2(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.component2|component2(){}[0]
+    final fun component3(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.component3|component3(){}[0]
+    final fun component4(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.component4|component4(){}[0]
+    final fun component5(): io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.component5|component5(){}[0]
+    final fun component6(): io.github.andrewmalitchuk.uncial.model.source.options/RasterColor // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.component6|component6(){}[0]
+    final fun component7(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.component7|component7(){}[0]
+    final fun component8(): kotlin.ranges/IntRange? // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.component8|component8(){}[0]
+    final fun copy(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> = ..., kotlin/Int = ..., kotlin/Int = ..., kotlin/Boolean = ..., io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality = ..., io.github.andrewmalitchuk.uncial.model.source.options/RasterColor = ..., kotlin/Boolean = ..., kotlin.ranges/IntRange? = ...): io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.copy|copy(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>;kotlin.Int;kotlin.Int;kotlin.Boolean;io.github.andrewmalitchuk.uncial.model.source.options.RecognitionQuality;io.github.andrewmalitchuk.uncial.model.source.options.RasterColor;kotlin.Boolean;kotlin.ranges.IntRange?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.hashCode|hashCode(){}[0]
+    final fun scaleForPage(kotlin/Float, kotlin/Float): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.scaleForPage|scaleForPage(kotlin.Float;kotlin.Float){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.toString|toString(){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion|null[0]
+        final const val DEFAULT_MAX_PAGE_SIDE // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.DEFAULT_MAX_PAGE_SIDE|{}DEFAULT_MAX_PAGE_SIDE[0]
+            final fun <get-DEFAULT_MAX_PAGE_SIDE>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.DEFAULT_MAX_PAGE_SIDE.<get-DEFAULT_MAX_PAGE_SIDE>|<get-DEFAULT_MAX_PAGE_SIDE>(){}[0]
+        final const val DEFAULT_RENDER_DPI // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.DEFAULT_RENDER_DPI|{}DEFAULT_RENDER_DPI[0]
+            final fun <get-DEFAULT_RENDER_DPI>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.DEFAULT_RENDER_DPI.<get-DEFAULT_RENDER_DPI>|<get-DEFAULT_RENDER_DPI>(){}[0]
+        final const val MAX_RENDER_DPI // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.MAX_RENDER_DPI|{}MAX_RENDER_DPI[0]
+            final fun <get-MAX_RENDER_DPI>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.MAX_RENDER_DPI.<get-MAX_RENDER_DPI>|<get-MAX_RENDER_DPI>(){}[0]
+        final const val MIN_PAGE_SIDE // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.MIN_PAGE_SIDE|{}MIN_PAGE_SIDE[0]
+            final fun <get-MIN_PAGE_SIDE>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.MIN_PAGE_SIDE.<get-MIN_PAGE_SIDE>|<get-MIN_PAGE_SIDE>(){}[0]
+        final const val MIN_RENDER_DPI // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.MIN_RENDER_DPI|{}MIN_RENDER_DPI[0]
+            final fun <get-MIN_RENDER_DPI>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.MIN_RENDER_DPI.<get-MIN_RENDER_DPI>|<get-MIN_RENDER_DPI>(){}[0]
+        final const val PDF_POINTS_PER_INCH // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.PDF_POINTS_PER_INCH|{}PDF_POINTS_PER_INCH[0]
+            final fun <get-PDF_POINTS_PER_INCH>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.PDF_POINTS_PER_INCH.<get-PDF_POINTS_PER_INCH>|<get-PDF_POINTS_PER_INCH>(){}[0]
+
+        final val Fast // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.Fast|{}Fast[0]
+            final fun <get-Fast>(): io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions // io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions.Companion.Fast.<get-Fast>|<get-Fast>(){}[0]
+    }
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument { // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument|null[0]
+    constructor <init>(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrPage>, io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource = ...) // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.<init>|<init>(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.text.OcrPage>;io.github.andrewmalitchuk.uncial.model.source.text.ExtractionSource){}[0]
+
+    final val isEmpty // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.isEmpty|{}isEmpty[0]
+        final fun <get-isEmpty>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.isEmpty.<get-isEmpty>|<get-isEmpty>(){}[0]
+    final val lines // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.lines|{}lines[0]
+        final fun <get-lines>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrLine> // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.lines.<get-lines>|<get-lines>(){}[0]
+    final val pageCount // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.pageCount|{}pageCount[0]
+        final fun <get-pageCount>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.pageCount.<get-pageCount>|<get-pageCount>(){}[0]
+    final val pages // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.pages|{}pages[0]
+        final fun <get-pages>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrPage> // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.pages.<get-pages>|<get-pages>(){}[0]
+    final val source // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.source|{}source[0]
+        final fun <get-source>(): io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.source.<get-source>|<get-source>(){}[0]
+    final val text // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.text|{}text[0]
+        final fun <get-text>(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.text.<get-text>|<get-text>(){}[0]
+
+    final fun component1(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrPage> // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.component1|component1(){}[0]
+    final fun component2(): io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.component2|component2(){}[0]
+    final fun copy(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrPage> = ..., io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource = ...): io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.copy|copy(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.text.OcrPage>;io.github.andrewmalitchuk.uncial.model.source.text.ExtractionSource){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument.toString|toString(){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.text/OcrLine { // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine|null[0]
+    constructor <init>(kotlin/String, io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox, kotlin/Float, io.github.andrewmalitchuk.uncial.model.source.text/Confidence = ..., kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrWord> = ..., io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage? = ..., kotlin/Float = ...) // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.<init>|<init>(kotlin.String;io.github.andrewmalitchuk.uncial.model.source.geometry.BoundingBox;kotlin.Float;io.github.andrewmalitchuk.uncial.model.source.text.Confidence;kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.text.OcrWord>;io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage?;kotlin.Float){}[0]
+
+    final val box // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.box|{}box[0]
+        final fun <get-box>(): io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.box.<get-box>|<get-box>(){}[0]
+    final val confidence // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.confidence|{}confidence[0]
+        final fun <get-confidence>(): io.github.andrewmalitchuk.uncial.model.source.text/Confidence // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.confidence.<get-confidence>|<get-confidence>(){}[0]
+    final val fontSize // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.fontSize|{}fontSize[0]
+        final fun <get-fontSize>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.fontSize.<get-fontSize>|<get-fontSize>(){}[0]
+    final val language // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.language|{}language[0]
+        final fun <get-language>(): io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage? // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.language.<get-language>|<get-language>(){}[0]
+    final val script // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.script|{}script[0]
+        final fun <get-script>(): io.github.andrewmalitchuk.uncial.model.source.text/TextScript // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.script.<get-script>|<get-script>(){}[0]
+    final val skewDegrees // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.skewDegrees|{}skewDegrees[0]
+        final fun <get-skewDegrees>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.skewDegrees.<get-skewDegrees>|<get-skewDegrees>(){}[0]
+    final val text // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.text|{}text[0]
+        final fun <get-text>(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.text.<get-text>|<get-text>(){}[0]
+    final val words // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.words|{}words[0]
+        final fun <get-words>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrWord> // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.words.<get-words>|<get-words>(){}[0]
+
+    final fun component1(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.component1|component1(){}[0]
+    final fun component2(): io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.component2|component2(){}[0]
+    final fun component3(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.component3|component3(){}[0]
+    final fun component4(): io.github.andrewmalitchuk.uncial.model.source.text/Confidence // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.component4|component4(){}[0]
+    final fun component5(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrWord> // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.component5|component5(){}[0]
+    final fun component6(): io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage? // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.component6|component6(){}[0]
+    final fun component7(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.component7|component7(){}[0]
+    final fun copy(kotlin/String = ..., io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox = ..., kotlin/Float = ..., io.github.andrewmalitchuk.uncial.model.source.text/Confidence = ..., kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrWord> = ..., io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage? = ..., kotlin/Float = ...): io.github.andrewmalitchuk.uncial.model.source.text/OcrLine // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.copy|copy(kotlin.String;io.github.andrewmalitchuk.uncial.model.source.geometry.BoundingBox;kotlin.Float;io.github.andrewmalitchuk.uncial.model.source.text.Confidence;kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.text.OcrWord>;io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage?;kotlin.Float){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrLine.toString|toString(){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.text/OcrPage { // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage|null[0]
+    constructor <init>(kotlin/Int, io.github.andrewmalitchuk.uncial.model.source.geometry/Size, kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrLine>, io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation = ..., io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource = ...) // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.<init>|<init>(kotlin.Int;io.github.andrewmalitchuk.uncial.model.source.geometry.Size;kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.text.OcrLine>;io.github.andrewmalitchuk.uncial.model.source.geometry.Orientation;io.github.andrewmalitchuk.uncial.model.source.text.ExtractionSource){}[0]
+
+    final val index // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.index|{}index[0]
+        final fun <get-index>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.index.<get-index>|<get-index>(){}[0]
+    final val isEmpty // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.isEmpty|{}isEmpty[0]
+        final fun <get-isEmpty>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.isEmpty.<get-isEmpty>|<get-isEmpty>(){}[0]
+    final val lines // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.lines|{}lines[0]
+        final fun <get-lines>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrLine> // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.lines.<get-lines>|<get-lines>(){}[0]
+    final val orientation // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.orientation|{}orientation[0]
+        final fun <get-orientation>(): io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.orientation.<get-orientation>|<get-orientation>(){}[0]
+    final val size // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.size|{}size[0]
+        final fun <get-size>(): io.github.andrewmalitchuk.uncial.model.source.geometry/Size // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.size.<get-size>|<get-size>(){}[0]
+    final val source // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.source|{}source[0]
+        final fun <get-source>(): io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.source.<get-source>|<get-source>(){}[0]
+    final val text // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.text|{}text[0]
+        final fun <get-text>(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.text.<get-text>|<get-text>(){}[0]
+
+    final fun component1(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.component1|component1(){}[0]
+    final fun component2(): io.github.andrewmalitchuk.uncial.model.source.geometry/Size // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.component2|component2(){}[0]
+    final fun component3(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrLine> // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.component3|component3(){}[0]
+    final fun component4(): io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.component4|component4(){}[0]
+    final fun component5(): io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.component5|component5(){}[0]
+    final fun copy(kotlin/Int = ..., io.github.andrewmalitchuk.uncial.model.source.geometry/Size = ..., kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.text/OcrLine> = ..., io.github.andrewmalitchuk.uncial.model.source.geometry/Orientation = ..., io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource = ...): io.github.andrewmalitchuk.uncial.model.source.text/OcrPage // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.copy|copy(kotlin.Int;io.github.andrewmalitchuk.uncial.model.source.geometry.Size;kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.text.OcrLine>;io.github.andrewmalitchuk.uncial.model.source.geometry.Orientation;io.github.andrewmalitchuk.uncial.model.source.text.ExtractionSource){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrPage.toString|toString(){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.model.source.text/OcrWord { // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord|null[0]
+    constructor <init>(kotlin/String, io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox, io.github.andrewmalitchuk.uncial.model.source.text/Confidence = ...) // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.<init>|<init>(kotlin.String;io.github.andrewmalitchuk.uncial.model.source.geometry.BoundingBox;io.github.andrewmalitchuk.uncial.model.source.text.Confidence){}[0]
+
+    final val box // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.box|{}box[0]
+        final fun <get-box>(): io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.box.<get-box>|<get-box>(){}[0]
+    final val confidence // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.confidence|{}confidence[0]
+        final fun <get-confidence>(): io.github.andrewmalitchuk.uncial.model.source.text/Confidence // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.confidence.<get-confidence>|<get-confidence>(){}[0]
+    final val text // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.text|{}text[0]
+        final fun <get-text>(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.text.<get-text>|<get-text>(){}[0]
+
+    final fun component1(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.component1|component1(){}[0]
+    final fun component2(): io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.component2|component2(){}[0]
+    final fun component3(): io.github.andrewmalitchuk.uncial.model.source.text/Confidence // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.component3|component3(){}[0]
+    final fun copy(kotlin/String = ..., io.github.andrewmalitchuk.uncial.model.source.geometry/BoundingBox = ..., io.github.andrewmalitchuk.uncial.model.source.text/Confidence = ...): io.github.andrewmalitchuk.uncial.model.source.text/OcrWord // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.copy|copy(kotlin.String;io.github.andrewmalitchuk.uncial.model.source.geometry.BoundingBox;io.github.andrewmalitchuk.uncial.model.source.text.Confidence){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/OcrWord.toString|toString(){}[0]
+}
+
+final value class io.github.andrewmalitchuk.uncial.model.source.text/Confidence : kotlin/Comparable<io.github.andrewmalitchuk.uncial.model.source.text/Confidence> { // io.github.andrewmalitchuk.uncial.model.source.text/Confidence|null[0]
+    final val isKnown // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.isKnown|{}isKnown[0]
+        final fun <get-isKnown>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.isKnown.<get-isKnown>|<get-isKnown>(){}[0]
+    final val value // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.value|{}value[0]
+        final fun <get-value>(): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.value.<get-value>|<get-value>(){}[0]
+
+    final fun compareTo(io.github.andrewmalitchuk.uncial.model.source.text/Confidence): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.compareTo|compareTo(io.github.andrewmalitchuk.uncial.model.source.text.Confidence){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.hashCode|hashCode(){}[0]
+    final fun orElse(kotlin/Float): kotlin/Float // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.orElse|orElse(kotlin.Float){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.toString|toString(){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.Companion|null[0]
+        final val Certain // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.Companion.Certain|{}Certain[0]
+            final fun <get-Certain>(): io.github.andrewmalitchuk.uncial.model.source.text/Confidence // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.Companion.Certain.<get-Certain>|<get-Certain>(){}[0]
+        final val Unknown // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.Companion.Unknown|{}Unknown[0]
+            final fun <get-Unknown>(): io.github.andrewmalitchuk.uncial.model.source.text/Confidence // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.Companion.Unknown.<get-Unknown>|<get-Unknown>(){}[0]
+
+        final fun of(kotlin/Float): io.github.andrewmalitchuk.uncial.model.source.text/Confidence // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.Companion.of|of(kotlin.Float){}[0]
+        final fun ofPercent(kotlin/Float): io.github.andrewmalitchuk.uncial.model.source.text/Confidence // io.github.andrewmalitchuk.uncial.model.source.text/Confidence.Companion.ofPercent|ofPercent(kotlin.Float){}[0]
+    }
+}
+
+sealed class io.github.andrewmalitchuk.uncial.model.source.error/OcrError : kotlin/Exception { // io.github.andrewmalitchuk.uncial.model.source.error/OcrError|null[0]
+    final class EngineInit : io.github.andrewmalitchuk.uncial.model.source.error/OcrError { // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.EngineInit|null[0]
+        constructor <init>(kotlin/String, kotlin/Throwable? = ...) // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.EngineInit.<init>|<init>(kotlin.String;kotlin.Throwable?){}[0]
+    }
+
+    final class InvalidInput : io.github.andrewmalitchuk.uncial.model.source.error/OcrError { // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.InvalidInput|null[0]
+        constructor <init>(kotlin/String, kotlin/Throwable? = ...) // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.InvalidInput.<init>|<init>(kotlin.String;kotlin.Throwable?){}[0]
+    }
+
+    final class NoLanguageData : io.github.andrewmalitchuk.uncial.model.source.error/OcrError { // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.NoLanguageData|null[0]
+        constructor <init>(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage>, kotlin/String? = ..., kotlin/Throwable? = ...) // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.NoLanguageData.<init>|<init>(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>;kotlin.String?;kotlin.Throwable?){}[0]
+
+        final val languages // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.NoLanguageData.languages|{}languages[0]
+            final fun <get-languages>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.NoLanguageData.languages.<get-languages>|<get-languages>(){}[0]
+        final val searchedPath // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.NoLanguageData.searchedPath|{}searchedPath[0]
+            final fun <get-searchedPath>(): kotlin/String? // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.NoLanguageData.searchedPath.<get-searchedPath>|<get-searchedPath>(){}[0]
+    }
+
+    final class RecognitionFailed : io.github.andrewmalitchuk.uncial.model.source.error/OcrError { // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.RecognitionFailed|null[0]
+        constructor <init>(kotlin/Int, kotlin/String = ..., kotlin/Throwable? = ...) // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.RecognitionFailed.<init>|<init>(kotlin.Int;kotlin.String;kotlin.Throwable?){}[0]
+
+        final val pageIndex // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.RecognitionFailed.pageIndex|{}pageIndex[0]
+            final fun <get-pageIndex>(): kotlin/Int // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.RecognitionFailed.pageIndex.<get-pageIndex>|<get-pageIndex>(){}[0]
+    }
+
+    final class RenderFailed : io.github.andrewmalitchuk.uncial.model.source.error/OcrError { // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.RenderFailed|null[0]
+        constructor <init>(kotlin/Int? = ..., kotlin/String = ..., kotlin/Throwable? = ...) // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.RenderFailed.<init>|<init>(kotlin.Int?;kotlin.String;kotlin.Throwable?){}[0]
+
+        final val pageIndex // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.RenderFailed.pageIndex|{}pageIndex[0]
+            final fun <get-pageIndex>(): kotlin/Int? // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.RenderFailed.pageIndex.<get-pageIndex>|<get-pageIndex>(){}[0]
+    }
+
+    final class Unsupported : io.github.andrewmalitchuk.uncial.model.source.error/OcrError { // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.Unsupported|null[0]
+        constructor <init>(kotlin/String, kotlin/Throwable? = ...) // io.github.andrewmalitchuk.uncial.model.source.error/OcrError.Unsupported.<init>|<init>(kotlin.String;kotlin.Throwable?){}[0]
+    }
+}

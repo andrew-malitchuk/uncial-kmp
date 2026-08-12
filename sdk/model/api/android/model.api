@@ -1,0 +1,341 @@
+public abstract class io/github/andrewmalitchuk/uncial/model/source/error/OcrError : java/lang/Exception {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Throwable;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/error/OcrError$EngineInit : io/github/andrewmalitchuk/uncial/model/source/error/OcrError {
+	public fun <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/error/OcrError$InvalidInput : io/github/andrewmalitchuk/uncial/model/source/error/OcrError {
+	public fun <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/error/OcrError$NoLanguageData : io/github/andrewmalitchuk/uncial/model/source/error/OcrError {
+	public fun <init> (Ljava/util/List;Ljava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getLanguages ()Ljava/util/List;
+	public final fun getSearchedPath ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/error/OcrError$RecognitionFailed : io/github/andrewmalitchuk/uncial/model/source/error/OcrError {
+	public fun <init> (ILjava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getPageIndex ()I
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/error/OcrError$RenderFailed : io/github/andrewmalitchuk/uncial/model/source/error/OcrError {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getPageIndex ()Ljava/lang/Integer;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/error/OcrError$Unsupported : io/github/andrewmalitchuk/uncial/model/source/error/OcrError {
+	public fun <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox$Companion;
+	public fun <init> (FFFF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun copy (FFFF)Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;FFFFILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArea ()F
+	public final fun getBottom ()F
+	public final fun getCenter ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/Point;
+	public final fun getHeight ()F
+	public final fun getLeft ()F
+	public final fun getRight ()F
+	public final fun getTop ()F
+	public final fun getWidth ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public final fun union (Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;)Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox$Companion {
+	public final fun getZero ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/geometry/Orientation : java/lang/Enum {
+	public static final field Down Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;
+	public static final field Left Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;
+	public static final field Right Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;
+	public static final field Up Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;
+	public final fun getDegrees ()I
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;
+	public static fun values ()[Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/geometry/Point {
+	public fun <init> (FF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun copy (FF)Lio/github/andrewmalitchuk/uncial/model/source/geometry/Point;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/model/source/geometry/Point;FFILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/geometry/Point;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getX ()F
+	public final fun getY ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/geometry/Size {
+	public fun <init> (FF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun copy (FF)Lio/github/andrewmalitchuk/uncial/model/source/geometry/Size;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/model/source/geometry/Size;FFILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/geometry/Size;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHeight ()F
+	public final fun getWidth ()F
+	public fun hashCode ()I
+	public final fun isEmpty ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage$Companion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBcp47 ()Ljava/lang/String;
+	public final fun getTesseractCode ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage$Companion {
+	public final fun custom (Ljava/lang/String;Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;
+	public static synthetic fun custom$default (Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage$Companion;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;
+	public final fun getDefault ()Ljava/util/List;
+	public final fun getEnglish ()Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;
+	public final fun getUkrainian ()Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/options/OcrOptions {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions$Companion;
+	public static final field DEFAULT_MAX_PAGE_SIDE I
+	public static final field DEFAULT_RENDER_DPI I
+	public static final field MAX_RENDER_DPI I
+	public static final field MIN_PAGE_SIDE I
+	public static final field MIN_RENDER_DPI I
+	public static final field PDF_POINTS_PER_INCH F
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;IIZLio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;ZLkotlin/ranges/IntRange;)V
+	public synthetic fun <init> (Ljava/util/List;IIZLio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;ZLkotlin/ranges/IntRange;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()Z
+	public final fun component5 ()Lio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;
+	public final fun component6 ()Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;
+	public final fun component7 ()Z
+	public final fun component8 ()Lkotlin/ranges/IntRange;
+	public final fun copy (Ljava/util/List;IIZLio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;ZLkotlin/ranges/IntRange;)Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;Ljava/util/List;IIZLio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;ZLkotlin/ranges/IntRange;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getIncludeWords ()Z
+	public final fun getLanguages ()Ljava/util/List;
+	public final fun getMaxPageSide ()I
+	public final fun getPageRange ()Lkotlin/ranges/IntRange;
+	public final fun getPreferDigitalLayer ()Z
+	public final fun getRasterColor ()Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;
+	public final fun getRecognitionQuality ()Lio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;
+	public final fun getRenderDpi ()I
+	public final fun getRenderScale ()F
+	public fun hashCode ()I
+	public final fun scaleForPage (FF)F
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/options/OcrOptions$Companion {
+	public final fun getFast ()Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/options/RasterColor : java/lang/Enum {
+	public static final field Color Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;
+	public static final field Grayscale Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;
+	public static fun values ()[Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality : java/lang/Enum {
+	public static final field Accurate Lio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;
+	public static final field Fast Lio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;
+	public static fun values ()[Lio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;
+}
+
+public abstract interface class io/github/andrewmalitchuk/uncial/model/source/structure/DocBlock {
+	public abstract fun getText ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/structure/DocBlock$Heading : io/github/andrewmalitchuk/uncial/model/source/structure/DocBlock {
+	public fun <init> (ILjava/lang/String;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (ILjava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/structure/DocBlock$Heading;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/model/source/structure/DocBlock$Heading;ILjava/lang/String;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/structure/DocBlock$Heading;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLevel ()I
+	public fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/structure/DocBlock$Paragraph : io/github/andrewmalitchuk/uncial/model/source/structure/DocBlock {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/structure/DocBlock$Paragraph;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/model/source/structure/DocBlock$Paragraph;Ljava/lang/String;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/structure/DocBlock$Paragraph;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/Confidence : java/lang/Comparable {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/model/source/text/Confidence$Companion;
+	public static final synthetic fun box-impl (F)Lio/github/andrewmalitchuk/uncial/model/source/text/Confidence;
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public fun compareTo-Q-sGUdI (F)I
+	public static fun compareTo-Q-sGUdI (FF)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (FLjava/lang/Object;)Z
+	public static final fun equals-impl0 (FF)Z
+	public final fun getValue ()F
+	public fun hashCode ()I
+	public static fun hashCode-impl (F)I
+	public static final fun isKnown-impl (F)Z
+	public static final fun orElse-impl (FF)F
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (F)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()F
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/Confidence$Companion {
+	public final fun getCertain-CXFpPdI ()F
+	public final fun getUnknown-CXFpPdI ()F
+	public final fun of--1iz08U (F)F
+	public final fun ofPercent--1iz08U (F)F
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource : java/lang/Enum {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource$Companion;
+	public static final field DigitalTextLayer Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public static final field Mixed Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public static final field Ocr Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public static fun values ()[Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource$Companion {
+	public final fun of (Ljava/lang/Iterable;)Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/OcrDocument {
+	public fun <init> (Ljava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;)V
+	public synthetic fun <init> (Ljava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public final fun copy (Ljava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;)Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;Ljava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLines ()Ljava/util/List;
+	public final fun getPageCount ()I
+	public final fun getPages ()Ljava/util/List;
+	public final fun getSource ()Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isEmpty ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/OcrLine {
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;FFLjava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;FILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;FFLjava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;FLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;
+	public final fun component3 ()F
+	public final fun component4-CXFpPdI ()F
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;
+	public final fun component7 ()F
+	public final fun copy-1w1LWCs (Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;FFLjava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;F)Lio/github/andrewmalitchuk/uncial/model/source/text/OcrLine;
+	public static synthetic fun copy-1w1LWCs$default (Lio/github/andrewmalitchuk/uncial/model/source/text/OcrLine;Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;FFLjava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;FILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/text/OcrLine;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBox ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;
+	public final fun getConfidence-CXFpPdI ()F
+	public final fun getFontSize ()F
+	public final fun getLanguage ()Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;
+	public final fun getScript ()Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript;
+	public final fun getSkewDegrees ()F
+	public final fun getText ()Ljava/lang/String;
+	public final fun getWords ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/OcrPage {
+	public fun <init> (ILio/github/andrewmalitchuk/uncial/model/source/geometry/Size;Ljava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;)V
+	public synthetic fun <init> (ILio/github/andrewmalitchuk/uncial/model/source/geometry/Size;Ljava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/Size;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;
+	public final fun component5 ()Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public final fun copy (ILio/github/andrewmalitchuk/uncial/model/source/geometry/Size;Ljava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;)Lio/github/andrewmalitchuk/uncial/model/source/text/OcrPage;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/model/source/text/OcrPage;ILio/github/andrewmalitchuk/uncial/model/source/geometry/Size;Ljava/util/List;Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/text/OcrPage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getIndex ()I
+	public final fun getLines ()Ljava/util/List;
+	public final fun getOrientation ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/Orientation;
+	public final fun getSize ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/Size;
+	public final fun getSource ()Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isEmpty ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/OcrWord {
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;FILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;FLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;
+	public final fun component3-CXFpPdI ()F
+	public final fun copy-zHeu98k (Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;F)Lio/github/andrewmalitchuk/uncial/model/source/text/OcrWord;
+	public static synthetic fun copy-zHeu98k$default (Lio/github/andrewmalitchuk/uncial/model/source/text/OcrWord;Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;FILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/model/source/text/OcrWord;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBox ()Lio/github/andrewmalitchuk/uncial/model/source/geometry/BoundingBox;
+	public final fun getConfidence-CXFpPdI ()F
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/TextScript : java/lang/Enum {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript$Companion;
+	public static final field Cyrillic Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript;
+	public static final field Latin Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript;
+	public static final field Mixed Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript;
+	public static final field Unknown Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript;
+	public static fun values ()[Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript;
+}
+
+public final class io/github/andrewmalitchuk/uncial/model/source/text/TextScript$Companion {
+	public final fun of (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/model/source/text/TextScript;
+}
+
