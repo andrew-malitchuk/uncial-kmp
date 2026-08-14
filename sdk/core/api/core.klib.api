@@ -1,0 +1,132 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-core>
+final enum class io.github.andrewmalitchuk.uncial.core.source.log/LogLevel : kotlin/Enum<io.github.andrewmalitchuk.uncial.core.source.log/LogLevel> { // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel|null[0]
+    enum entry Debug // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel.Debug|null[0]
+    enum entry Error // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel.Error|null[0]
+    enum entry Info // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel.Info|null[0]
+    enum entry Warning // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel.Warning|null[0]
+
+    final val entries // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.andrewmalitchuk.uncial.core.source.log/LogLevel> // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.andrewmalitchuk.uncial.core.source.log/LogLevel // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.andrewmalitchuk.uncial.core.source.log/LogLevel> // io.github.andrewmalitchuk.uncial.core.source.log/LogLevel.values|values#static(){}[0]
+}
+
+abstract fun interface io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger { // io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger|null[0]
+    abstract fun log(io.github.andrewmalitchuk.uncial.core.source.log/LogLevel, kotlin/String, kotlin/Throwable?) // io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger.log|log(io.github.andrewmalitchuk.uncial.core.source.log.LogLevel;kotlin.String;kotlin.Throwable?){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger.Companion|null[0]
+        final val None // io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger.Companion.None|{}None[0]
+            final fun <get-None>(): io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger // io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger.Companion.None.<get-None>|<get-None>(){}[0]
+    }
+}
+
+abstract interface io.github.andrewmalitchuk.uncial.core.source.engine/DigitalTextExtractor { // io.github.andrewmalitchuk.uncial.core.source.engine/DigitalTextExtractor|null[0]
+    abstract val id // io.github.andrewmalitchuk.uncial.core.source.engine/DigitalTextExtractor.id|{}id[0]
+        abstract fun <get-id>(): kotlin/String // io.github.andrewmalitchuk.uncial.core.source.engine/DigitalTextExtractor.id.<get-id>|<get-id>(){}[0]
+
+    abstract suspend fun extract(kotlin/ByteArray, io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions): io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument? // io.github.andrewmalitchuk.uncial.core.source.engine/DigitalTextExtractor.extract|extract(kotlin.ByteArray;io.github.andrewmalitchuk.uncial.model.source.options.OcrOptions){}[0]
+}
+
+abstract interface io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory { // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory|null[0]
+    abstract val id // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory.id|{}id[0]
+        abstract fun <get-id>(): kotlin/String // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory.id.<get-id>|<get-id>(){}[0]
+
+    abstract fun capabilities(io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions): io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory.capabilities|capabilities(io.github.andrewmalitchuk.uncial.model.source.options.OcrOptions){}[0]
+    abstract fun isAvailable(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory.isAvailable|isAvailable(){}[0]
+    abstract suspend fun create(io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions, io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger = ..., io.github.andrewmalitchuk.uncial.core.source.language/LanguageDataProvider? = ...): io.github.andrewmalitchuk.uncial.core.source.recognizer/TextRecognizer // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory.create|create(io.github.andrewmalitchuk.uncial.model.source.options.OcrOptions;io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger;io.github.andrewmalitchuk.uncial.core.source.language.LanguageDataProvider?){}[0]
+}
+
+abstract interface io.github.andrewmalitchuk.uncial.core.source.language/LanguageDataProvider { // io.github.andrewmalitchuk.uncial.core.source.language/LanguageDataProvider|null[0]
+    abstract suspend fun available(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage>): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> // io.github.andrewmalitchuk.uncial.core.source.language/LanguageDataProvider.available|available(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>){}[0]
+    abstract suspend fun materialize(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage>): kotlin/String // io.github.andrewmalitchuk.uncial.core.source.language/LanguageDataProvider.materialize|materialize(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>){}[0]
+}
+
+abstract interface io.github.andrewmalitchuk.uncial.core.source.raster/PageRasterizer { // io.github.andrewmalitchuk.uncial.core.source.raster/PageRasterizer|null[0]
+    abstract suspend fun open(kotlin/ByteArray): io.github.andrewmalitchuk.uncial.core.source.raster/RasterizedDocument // io.github.andrewmalitchuk.uncial.core.source.raster/PageRasterizer.open|open(kotlin.ByteArray){}[0]
+}
+
+abstract interface io.github.andrewmalitchuk.uncial.core.source.raster/RasterizedDocument : kotlin/AutoCloseable { // io.github.andrewmalitchuk.uncial.core.source.raster/RasterizedDocument|null[0]
+    abstract val pageCount // io.github.andrewmalitchuk.uncial.core.source.raster/RasterizedDocument.pageCount|{}pageCount[0]
+        abstract fun <get-pageCount>(): kotlin/Int // io.github.andrewmalitchuk.uncial.core.source.raster/RasterizedDocument.pageCount.<get-pageCount>|<get-pageCount>(){}[0]
+
+    abstract suspend fun rasterize(kotlin/Int, io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions): io.github.andrewmalitchuk.uncial.core.source.raster/Raster // io.github.andrewmalitchuk.uncial.core.source.raster/RasterizedDocument.rasterize|rasterize(kotlin.Int;io.github.andrewmalitchuk.uncial.model.source.options.OcrOptions){}[0]
+}
+
+abstract interface io.github.andrewmalitchuk.uncial.core.source.recognizer/TextRecognizer : kotlin/AutoCloseable { // io.github.andrewmalitchuk.uncial.core.source.recognizer/TextRecognizer|null[0]
+    abstract val capabilities // io.github.andrewmalitchuk.uncial.core.source.recognizer/TextRecognizer.capabilities|{}capabilities[0]
+        abstract fun <get-capabilities>(): io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities // io.github.andrewmalitchuk.uncial.core.source.recognizer/TextRecognizer.capabilities.<get-capabilities>|<get-capabilities>(){}[0]
+
+    abstract suspend fun recognize(io.github.andrewmalitchuk.uncial.core.source.raster/Raster, kotlin/Int, io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions): io.github.andrewmalitchuk.uncial.model.source.text/OcrPage // io.github.andrewmalitchuk.uncial.core.source.recognizer/TextRecognizer.recognize|recognize(io.github.andrewmalitchuk.uncial.core.source.raster.Raster;kotlin.Int;io.github.andrewmalitchuk.uncial.model.source.options.OcrOptions){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities { // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities|null[0]
+    constructor <init>(kotlin/String, kotlin/String? = ..., kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.<init>|<init>(kotlin.String;kotlin.String?;kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean){}[0]
+
+    final val confidence // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.confidence|{}confidence[0]
+        final fun <get-confidence>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.confidence.<get-confidence>|<get-confidence>(){}[0]
+    final val engineId // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.engineId|{}engineId[0]
+        final fun <get-engineId>(): kotlin/String // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.engineId.<get-engineId>|<get-engineId>(){}[0]
+    final val engineVersion // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.engineVersion|{}engineVersion[0]
+        final fun <get-engineVersion>(): kotlin/String? // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.engineVersion.<get-engineVersion>|<get-engineVersion>(){}[0]
+    final val languages // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.languages|{}languages[0]
+        final fun <get-languages>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.languages.<get-languages>|<get-languages>(){}[0]
+    final val orientationDetection // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.orientationDetection|{}orientationDetection[0]
+        final fun <get-orientationDetection>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.orientationDetection.<get-orientationDetection>|<get-orientationDetection>(){}[0]
+    final val perLineLanguage // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.perLineLanguage|{}perLineLanguage[0]
+        final fun <get-perLineLanguage>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.perLineLanguage.<get-perLineLanguage>|<get-perLineLanguage>(){}[0]
+    final val skewDetection // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.skewDetection|{}skewDetection[0]
+        final fun <get-skewDetection>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.skewDetection.<get-skewDetection>|<get-skewDetection>(){}[0]
+    final val wordLevel // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.wordLevel|{}wordLevel[0]
+        final fun <get-wordLevel>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.wordLevel.<get-wordLevel>|<get-wordLevel>(){}[0]
+
+    final fun component1(): kotlin/String // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.component2|component2(){}[0]
+    final fun component3(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.component3|component3(){}[0]
+    final fun component4(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.component4|component4(){}[0]
+    final fun component5(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.component5|component5(){}[0]
+    final fun component6(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.component6|component6(){}[0]
+    final fun component7(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.component7|component7(){}[0]
+    final fun component8(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.component8|component8(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String? = ..., kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ...): io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.copy|copy(kotlin.String;kotlin.String?;kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean){}[0]
+    final fun droppedAnyOf(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage>): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.droppedAnyOf|droppedAnyOf(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities.toString|toString(){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.core.source.raster/Raster { // io.github.andrewmalitchuk.uncial.core.source.raster/Raster|null[0]
+    constructor <init>(kotlinx.cinterop/CPointer<cnames.structs/CGImage>, kotlin/Int? = ...) // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.<init>|<init>(kotlinx.cinterop.CPointer<cnames.structs.CGImage>;kotlin.Int?){}[0]
+
+    final val height // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.height|{}height[0]
+        final fun <get-height>(): kotlin/Int // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.height.<get-height>|<get-height>(){}[0]
+    final val image // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.image|{}image[0]
+        final fun <get-image>(): kotlinx.cinterop/CPointer<cnames.structs/CGImage> // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.image.<get-image>|<get-image>(){}[0]
+    final val sourceDpi // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.sourceDpi|{}sourceDpi[0]
+        final fun <get-sourceDpi>(): kotlin/Int? // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.sourceDpi.<get-sourceDpi>|<get-sourceDpi>(){}[0]
+    final val width // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.width|{}width[0]
+        final fun <get-width>(): kotlin/Int // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.width.<get-width>|<get-width>(){}[0]
+
+    final fun release() // io.github.andrewmalitchuk.uncial.core.source.raster/Raster.release|release(){}[0]
+}
+
+final object io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineRegistry { // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineRegistry|null[0]
+    final fun engines(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory> // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineRegistry.engines|engines(){}[0]
+    final fun firstAvailable(): io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory? // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineRegistry.firstAvailable|firstAvailable(){}[0]
+    final fun lastProbeFailure(): kotlin/Throwable? // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineRegistry.lastProbeFailure|lastProbeFailure(){}[0]
+    final fun register(io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory) // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineRegistry.register|register(io.github.andrewmalitchuk.uncial.core.source.engine.OcrEngineFactory){}[0]
+    final fun unregister(kotlin/String) // io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineRegistry.unregister|unregister(kotlin.String){}[0]
+}
+
+final fun (io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger).io.github.andrewmalitchuk.uncial.core.source.log/debug(kotlin/String) // io.github.andrewmalitchuk.uncial.core.source.log/debug|debug@io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger(kotlin.String){}[0]
+final fun (io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger).io.github.andrewmalitchuk.uncial.core.source.log/error(kotlin/String, kotlin/Throwable? = ...) // io.github.andrewmalitchuk.uncial.core.source.log/error|error@io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger(kotlin.String;kotlin.Throwable?){}[0]
+final fun (io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger).io.github.andrewmalitchuk.uncial.core.source.log/info(kotlin/String) // io.github.andrewmalitchuk.uncial.core.source.log/info|info@io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger(kotlin.String){}[0]
+final fun (io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger).io.github.andrewmalitchuk.uncial.core.source.log/warn(kotlin/String, kotlin/Throwable? = ...) // io.github.andrewmalitchuk.uncial.core.source.log/warn|warn@io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger(kotlin.String;kotlin.Throwable?){}[0]
+final fun io.github.andrewmalitchuk.uncial.core.source.raster/placeholderRaster(kotlin/Int, kotlin/Int): io.github.andrewmalitchuk.uncial.core.source.raster/Raster // io.github.andrewmalitchuk.uncial.core.source.raster/placeholderRaster|placeholderRaster(kotlin.Int;kotlin.Int){}[0]

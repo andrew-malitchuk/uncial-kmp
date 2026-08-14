@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!--
+          androidx.startup gives the SDK an application Context without the consumer
+          writing a single line of init code. The POC required a manual
+          AndroidOcrSupport.init(this) from MainActivity, which an SDK cannot ask for.
+          (PLAN.md §5.5)
+        -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge"
+            xmlns:tools="http://schemas.android.com/tools">
+            <meta-data
+                android:name="io.github.andrewmalitchuk.uncial.core.source.android.UncialContextInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+</manifest>
