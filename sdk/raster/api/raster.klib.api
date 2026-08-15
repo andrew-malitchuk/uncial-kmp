@@ -1,0 +1,9 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-raster>
+final fun io.github.andrewmalitchuk.uncial.raster.source.rasterizer/createPageRasterizer(io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger = ...): io.github.andrewmalitchuk.uncial.core.source.raster/PageRasterizer // io.github.andrewmalitchuk.uncial.raster.source.rasterizer/createPageRasterizer|createPageRasterizer(io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger){}[0]

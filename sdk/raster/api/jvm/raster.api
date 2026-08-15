@@ -1,0 +1,5 @@
+public final class io/github/andrewmalitchuk/uncial/raster/source/rasterizer/PageRasterizers_jvmKt {
+	public static final fun createPageRasterizer (Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;)Lio/github/andrewmalitchuk/uncial/core/source/raster/PageRasterizer;
+	public static synthetic fun createPageRasterizer$default (Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/core/source/raster/PageRasterizer;
+}
+
