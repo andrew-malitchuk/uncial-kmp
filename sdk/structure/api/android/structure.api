@@ -1,0 +1,37 @@
+public final class io/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions$Companion;
+	public fun <init> ()V
+	public fun <init> (FFFFIIZ)V
+	public synthetic fun <init> (FFFFIIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()I
+	public final fun component6 ()I
+	public final fun component7 ()Z
+	public final fun copy (FFFFIIZ)Lio/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions;FFFFIIZILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChromeFrequency ()F
+	public final fun getDropChrome ()Z
+	public final fun getH1Ratio ()F
+	public final fun getHeadingRatio ()F
+	public final fun getMaxHeadingWords ()I
+	public final fun getMinPagesForChromeDetection ()I
+	public final fun getParagraphGapRatio ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions$Companion {
+	public final fun getDefault ()Lio/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions;
+	public final fun getKeepChrome ()Lio/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions;
+}
+
+public final class io/github/andrewmalitchuk/uncial/structure/source/reconstruction/DocumentStructure {
+	public static final field INSTANCE Lio/github/andrewmalitchuk/uncial/structure/source/reconstruction/DocumentStructure;
+	public final fun reconstruct (Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;Lio/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions;)Ljava/util/List;
+	public static synthetic fun reconstruct$default (Lio/github/andrewmalitchuk/uncial/structure/source/reconstruction/DocumentStructure;Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;Lio/github/andrewmalitchuk/uncial/structure/source/options/StructureOptions;ILjava/lang/Object;)Ljava/util/List;
+}
+

@@ -1,0 +1,49 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-structure>
+final class io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions { // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions|null[0]
+    constructor <init>(kotlin/Float = ..., kotlin/Float = ..., kotlin/Float = ..., kotlin/Float = ..., kotlin/Int = ..., kotlin/Int = ..., kotlin/Boolean = ...) // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.<init>|<init>(kotlin.Float;kotlin.Float;kotlin.Float;kotlin.Float;kotlin.Int;kotlin.Int;kotlin.Boolean){}[0]
+
+    final val chromeFrequency // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.chromeFrequency|{}chromeFrequency[0]
+        final fun <get-chromeFrequency>(): kotlin/Float // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.chromeFrequency.<get-chromeFrequency>|<get-chromeFrequency>(){}[0]
+    final val dropChrome // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.dropChrome|{}dropChrome[0]
+        final fun <get-dropChrome>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.dropChrome.<get-dropChrome>|<get-dropChrome>(){}[0]
+    final val h1Ratio // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.h1Ratio|{}h1Ratio[0]
+        final fun <get-h1Ratio>(): kotlin/Float // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.h1Ratio.<get-h1Ratio>|<get-h1Ratio>(){}[0]
+    final val headingRatio // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.headingRatio|{}headingRatio[0]
+        final fun <get-headingRatio>(): kotlin/Float // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.headingRatio.<get-headingRatio>|<get-headingRatio>(){}[0]
+    final val maxHeadingWords // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.maxHeadingWords|{}maxHeadingWords[0]
+        final fun <get-maxHeadingWords>(): kotlin/Int // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.maxHeadingWords.<get-maxHeadingWords>|<get-maxHeadingWords>(){}[0]
+    final val minPagesForChromeDetection // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.minPagesForChromeDetection|{}minPagesForChromeDetection[0]
+        final fun <get-minPagesForChromeDetection>(): kotlin/Int // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.minPagesForChromeDetection.<get-minPagesForChromeDetection>|<get-minPagesForChromeDetection>(){}[0]
+    final val paragraphGapRatio // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.paragraphGapRatio|{}paragraphGapRatio[0]
+        final fun <get-paragraphGapRatio>(): kotlin/Float // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.paragraphGapRatio.<get-paragraphGapRatio>|<get-paragraphGapRatio>(){}[0]
+
+    final fun component1(): kotlin/Float // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.component1|component1(){}[0]
+    final fun component2(): kotlin/Float // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.component2|component2(){}[0]
+    final fun component3(): kotlin/Float // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.component3|component3(){}[0]
+    final fun component4(): kotlin/Float // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.component4|component4(){}[0]
+    final fun component5(): kotlin/Int // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.component5|component5(){}[0]
+    final fun component6(): kotlin/Int // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.component6|component6(){}[0]
+    final fun component7(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.component7|component7(){}[0]
+    final fun copy(kotlin/Float = ..., kotlin/Float = ..., kotlin/Float = ..., kotlin/Float = ..., kotlin/Int = ..., kotlin/Int = ..., kotlin/Boolean = ...): io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.copy|copy(kotlin.Float;kotlin.Float;kotlin.Float;kotlin.Float;kotlin.Int;kotlin.Int;kotlin.Boolean){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.toString|toString(){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.Companion|null[0]
+        final val Default // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.Companion.Default|{}Default[0]
+            final fun <get-Default>(): io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.Companion.Default.<get-Default>|<get-Default>(){}[0]
+        final val KeepChrome // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.Companion.KeepChrome|{}KeepChrome[0]
+            final fun <get-KeepChrome>(): io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions // io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions.Companion.KeepChrome.<get-KeepChrome>|<get-KeepChrome>(){}[0]
+    }
+}
+
+final object io.github.andrewmalitchuk.uncial.structure.source.reconstruction/DocumentStructure { // io.github.andrewmalitchuk.uncial.structure.source.reconstruction/DocumentStructure|null[0]
+    final fun reconstruct(io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument, io.github.andrewmalitchuk.uncial.structure.source.options/StructureOptions = ...): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock> // io.github.andrewmalitchuk.uncial.structure.source.reconstruction/DocumentStructure.reconstruct|reconstruct(io.github.andrewmalitchuk.uncial.model.source.text.OcrDocument;io.github.andrewmalitchuk.uncial.structure.source.options.StructureOptions){}[0]
+}
