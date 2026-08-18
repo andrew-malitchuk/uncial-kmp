@@ -1,0 +1,12 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-pdf-text>
+final const val io.github.andrewmalitchuk.uncial.pdftext.source.extractor/PDF_TEXT_EXTRACTOR_ID // io.github.andrewmalitchuk.uncial.pdftext.source.extractor/PDF_TEXT_EXTRACTOR_ID|{}PDF_TEXT_EXTRACTOR_ID[0]
+    final fun <get-PDF_TEXT_EXTRACTOR_ID>(): kotlin/String // io.github.andrewmalitchuk.uncial.pdftext.source.extractor/PDF_TEXT_EXTRACTOR_ID.<get-PDF_TEXT_EXTRACTOR_ID>|<get-PDF_TEXT_EXTRACTOR_ID>(){}[0]
+
+final fun io.github.andrewmalitchuk.uncial.pdftext.source.extractor/pdfTextExtractor(io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger = ...): io.github.andrewmalitchuk.uncial.core.source.engine/DigitalTextExtractor // io.github.andrewmalitchuk.uncial.pdftext.source.extractor/pdfTextExtractor|pdfTextExtractor(io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger){}[0]

@@ -1,0 +1,9 @@
+public final class io/github/andrewmalitchuk/uncial/pdftext/source/extractor/PdfTextExtractorIdKt {
+	public static final field PDF_TEXT_EXTRACTOR_ID Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/pdftext/source/extractor/PdfTextExtractor_jvmKt {
+	public static final fun pdfTextExtractor (Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;)Lio/github/andrewmalitchuk/uncial/core/source/engine/DigitalTextExtractor;
+	public static synthetic fun pdfTextExtractor$default (Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/core/source/engine/DigitalTextExtractor;
+}
+
