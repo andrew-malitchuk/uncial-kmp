@@ -1,0 +1,43 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-engine-fake>
+final class io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine : io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory { // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine|null[0]
+    constructor <init>(kotlin.collections/Map<kotlin/Int, kotlin/String> = ..., kotlin/String = ..., io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities = ..., kotlin/Int? = ..., kotlin/Boolean = ..., kotlin/Long = ...) // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.<init>|<init>(kotlin.collections.Map<kotlin.Int,kotlin.String>;kotlin.String;io.github.andrewmalitchuk.uncial.core.source.engine.OcrCapabilities;kotlin.Int?;kotlin.Boolean;kotlin.Long){}[0]
+
+    final val id // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.id|{}id[0]
+        final fun <get-id>(): kotlin/String // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.id.<get-id>|<get-id>(){}[0]
+
+    final fun capabilities(io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions): io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.capabilities|capabilities(io.github.andrewmalitchuk.uncial.model.source.options.OcrOptions){}[0]
+    final fun isAvailable(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.isAvailable|isAvailable(){}[0]
+    final suspend fun create(io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions, io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger, io.github.andrewmalitchuk.uncial.core.source.language/LanguageDataProvider?): io.github.andrewmalitchuk.uncial.core.source.recognizer/TextRecognizer // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.create|create(io.github.andrewmalitchuk.uncial.model.source.options.OcrOptions;io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger;io.github.andrewmalitchuk.uncial.core.source.language.LanguageDataProvider?){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.Companion|null[0]
+        final const val DEFAULT_PAGE_TEXT // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.Companion.DEFAULT_PAGE_TEXT|{}DEFAULT_PAGE_TEXT[0]
+            final fun <get-DEFAULT_PAGE_TEXT>(): kotlin/String // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.Companion.DEFAULT_PAGE_TEXT.<get-DEFAULT_PAGE_TEXT>|<get-DEFAULT_PAGE_TEXT>(){}[0]
+        final const val FAKE_ENGINE_ID // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.Companion.FAKE_ENGINE_ID|{}FAKE_ENGINE_ID[0]
+            final fun <get-FAKE_ENGINE_ID>(): kotlin/String // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.Companion.FAKE_ENGINE_ID.<get-FAKE_ENGINE_ID>|<get-FAKE_ENGINE_ID>(){}[0]
+
+        final val DefaultCapabilities // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.Companion.DefaultCapabilities|{}DefaultCapabilities[0]
+            final fun <get-DefaultCapabilities>(): io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities // io.github.andrewmalitchuk.uncial.engine.fake.source.engine/FakeOcrEngine.Companion.DefaultCapabilities.<get-DefaultCapabilities>|<get-DefaultCapabilities>(){}[0]
+    }
+}
+
+final class io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer : io.github.andrewmalitchuk.uncial.core.source.raster/PageRasterizer { // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer|null[0]
+    constructor <init>(kotlin/Int = ..., kotlin/Int = ..., kotlin/Int = ..., kotlin/Int? = ...) // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Int;kotlin.Int?){}[0]
+
+    final suspend fun open(kotlin/ByteArray): io.github.andrewmalitchuk.uncial.core.source.raster/RasterizedDocument // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer.open|open(kotlin.ByteArray){}[0]
+
+    final object Companion { // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer.Companion|null[0]
+        final const val DEFAULT_HEIGHT // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer.Companion.DEFAULT_HEIGHT|{}DEFAULT_HEIGHT[0]
+            final fun <get-DEFAULT_HEIGHT>(): kotlin/Int // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer.Companion.DEFAULT_HEIGHT.<get-DEFAULT_HEIGHT>|<get-DEFAULT_HEIGHT>(){}[0]
+        final const val DEFAULT_WIDTH // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer.Companion.DEFAULT_WIDTH|{}DEFAULT_WIDTH[0]
+            final fun <get-DEFAULT_WIDTH>(): kotlin/Int // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/FakePageRasterizer.Companion.DEFAULT_WIDTH.<get-DEFAULT_WIDTH>|<get-DEFAULT_WIDTH>(){}[0]
+    }
+}
+
+final fun io.github.andrewmalitchuk.uncial.engine.fake.source.raster/blankRaster(kotlin/Int, kotlin/Int): io.github.andrewmalitchuk.uncial.core.source.raster/Raster // io.github.andrewmalitchuk.uncial.engine.fake.source.raster/blankRaster|blankRaster(kotlin.Int;kotlin.Int){}[0]

@@ -1,0 +1,34 @@
+public final class io/github/andrewmalitchuk/uncial/engine/fake/source/engine/FakeOcrEngine : io/github/andrewmalitchuk/uncial/core/source/engine/OcrEngineFactory {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/engine/fake/source/engine/FakeOcrEngine$Companion;
+	public static final field DEFAULT_PAGE_TEXT Ljava/lang/String;
+	public static final field FAKE_ENGINE_ID Ljava/lang/String;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/Map;Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrCapabilities;Ljava/lang/Integer;ZJ)V
+	public synthetic fun <init> (Ljava/util/Map;Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrCapabilities;Ljava/lang/Integer;ZJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun capabilities (Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;)Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrCapabilities;
+	public fun create (Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;Lio/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getId ()Ljava/lang/String;
+	public fun isAvailable ()Z
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/fake/source/engine/FakeOcrEngine$Companion {
+	public final fun getDefaultCapabilities ()Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrCapabilities;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/fake/source/raster/FakePageRasterizer : io/github/andrewmalitchuk/uncial/core/source/raster/PageRasterizer {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/engine/fake/source/raster/FakePageRasterizer$Companion;
+	public static final field DEFAULT_HEIGHT I
+	public static final field DEFAULT_WIDTH I
+	public fun <init> ()V
+	public fun <init> (IIILjava/lang/Integer;)V
+	public synthetic fun <init> (IIILjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun open ([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/fake/source/raster/FakePageRasterizer$Companion {
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/fake/source/raster/FakeRaster_androidKt {
+	public static final fun blankRaster (II)Lio/github/andrewmalitchuk/uncial/core/source/raster/Raster;
+}
+
