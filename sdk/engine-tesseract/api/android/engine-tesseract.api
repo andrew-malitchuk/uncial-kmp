@@ -1,0 +1,37 @@
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/engine/DefaultTessDataProvider_androidKt {
+	public static final fun defaultTessDataProvider ()Lio/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/engine/TesseractEngineIdKt {
+	public static final field TESSERACT_ENGINE_ID Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/engine/TesseractEngine_androidKt {
+	public static final fun tesseractEngine (Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;)Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrEngineFactory;
+	public static synthetic fun tesseractEngine$default (Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrEngineFactory;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/install/InstallTesseractEngineKt {
+	public static final fun installTesseractEngine (Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;)V
+	public static synthetic fun installTesseractEngine$default (Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;ILjava/lang/Object;)V
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/install/TesseractEngineInitializer : androidx/startup/Initializer {
+	public fun <init> ()V
+	public synthetic fun create (Landroid/content/Context;)Ljava/lang/Object;
+	public fun create (Landroid/content/Context;)V
+	public fun dependencies ()Ljava/util/List;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation : java/lang/Enum {
+	public static final field Auto Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field AutoWithOrientation Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field SingleBlock Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field SingleLine Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field SingleWord Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field SparseText Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static fun values ()[Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+}
+

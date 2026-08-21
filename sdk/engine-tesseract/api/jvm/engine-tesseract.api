@@ -1,0 +1,55 @@
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/engine/DefaultTessDataProvider_jvmKt {
+	public static final fun defaultTessDataProvider ()Lio/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/engine/TesseractEngineIdKt {
+	public static final field TESSERACT_ENGINE_ID Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/engine/TesseractEngine_jvmKt {
+	public static final fun tesseractEngine (Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;)Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrEngineFactory;
+	public static synthetic fun tesseractEngine$default (Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrEngineFactory;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/install/InstallTesseractEngineKt {
+	public static final fun installTesseractEngine (Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;)V
+	public static synthetic fun installTesseractEngine$default (Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;ILjava/lang/Object;)V
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/language/ClasspathTessDataProvider : io/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/language/ClasspathTessDataProvider$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/io/File;Ljava/lang/ClassLoader;)V
+	public synthetic fun <init> (Ljava/io/File;Ljava/lang/ClassLoader;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun available (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun materialize (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/language/ClasspathTessDataProvider$Companion {
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/language/PlusKt {
+	public static final fun plus (Lio/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider;Lio/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider;)Lio/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/language/SystemTessDataProvider : io/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider {
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun available (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getDataPath ()Ljava/lang/String;
+	public fun materialize (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class io/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation : java/lang/Enum {
+	public static final field Auto Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field AutoWithOrientation Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field SingleBlock Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field SingleLine Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field SingleWord Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static final field SparseText Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+	public static fun values ()[Lio/github/andrewmalitchuk/uncial/engine/tesseract/source/options/TesseractPageSegmentation;
+}
+

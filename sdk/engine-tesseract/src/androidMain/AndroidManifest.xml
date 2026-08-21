@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <!--
+          Registers the Tesseract engine at process start, so an Android consumer really
+          does only have to add the dependency: no init call, no engine selection.
+          (PLAN.md §8.4)
+        -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="io.github.andrewmalitchuk.uncial.engine.tesseract.source.install.TesseractEngineInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+</manifest>
