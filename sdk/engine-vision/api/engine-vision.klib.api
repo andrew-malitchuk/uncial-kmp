@@ -1,0 +1,13 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-engine-vision>
+final const val io.github.andrewmalitchuk.uncial.engine.vision.source.engine/VISION_ENGINE_ID // io.github.andrewmalitchuk.uncial.engine.vision.source.engine/VISION_ENGINE_ID|{}VISION_ENGINE_ID[0]
+    final fun <get-VISION_ENGINE_ID>(): kotlin/String // io.github.andrewmalitchuk.uncial.engine.vision.source.engine/VISION_ENGINE_ID.<get-VISION_ENGINE_ID>|<get-VISION_ENGINE_ID>(){}[0]
+
+final fun io.github.andrewmalitchuk.uncial.engine.vision.source.engine/visionEngine(): io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory // io.github.andrewmalitchuk.uncial.engine.vision.source.engine/visionEngine|visionEngine(){}[0]
+final fun io.github.andrewmalitchuk.uncial.engine.vision.source.install/installVisionEngine() // io.github.andrewmalitchuk.uncial.engine.vision.source.install/installVisionEngine|installVisionEngine(){}[0]
