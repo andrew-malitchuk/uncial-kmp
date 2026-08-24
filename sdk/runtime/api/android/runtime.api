@@ -1,0 +1,95 @@
+public final class io/github/andrewmalitchuk/uncial/runtime/source/client/UncialClient : java/lang/AutoCloseable {
+	public fun close ()V
+	public final fun extract-gIAlu-s (Lio/github/andrewmalitchuk/uncial/core/source/raster/Raster;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun extract-gIAlu-s ([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun extractAsFlow (Lio/github/andrewmalitchuk/uncial/core/source/raster/Raster;)Lkotlinx/coroutines/flow/Flow;
+	public final fun extractAsFlow ([B)Lkotlinx/coroutines/flow/Flow;
+	public final fun extractOrThrow (Lio/github/andrewmalitchuk/uncial/core/source/raster/Raster;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun extractOrThrow ([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getCapabilities ()Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrCapabilities;
+	public final fun getHasDigitalTextLayerSupport ()Z
+	public final fun getOptions ()Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;
+	public final fun isAvailable ()Z
+}
+
+public final class io/github/andrewmalitchuk/uncial/runtime/source/client/UncialClientBuilder {
+	public final fun getDigitalTextExtractor ()Lio/github/andrewmalitchuk/uncial/core/source/engine/DigitalTextExtractor;
+	public final fun getEngine ()Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrEngineFactory;
+	public final fun getIncludeWords ()Z
+	public final fun getLanguageData ()Lio/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider;
+	public final fun getLanguages ()Ljava/util/List;
+	public final fun getLogger ()Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;
+	public final fun getMaxPageSide ()I
+	public final fun getOptions ()Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;
+	public final fun getPageRange ()Lkotlin/ranges/IntRange;
+	public final fun getPreferDigitalLayer ()Z
+	public final fun getRasterColor ()Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;
+	public final fun getRasterizer ()Lio/github/andrewmalitchuk/uncial/core/source/raster/PageRasterizer;
+	public final fun getRecognitionQuality ()Lio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;
+	public final fun getRenderDpi ()I
+	public final fun setDigitalTextExtractor (Lio/github/andrewmalitchuk/uncial/core/source/engine/DigitalTextExtractor;)V
+	public final fun setEngine (Lio/github/andrewmalitchuk/uncial/core/source/engine/OcrEngineFactory;)V
+	public final fun setIncludeWords (Z)V
+	public final fun setLanguageData (Lio/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider;)V
+	public final fun setLanguages (Ljava/util/List;)V
+	public final fun setLogger (Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;)V
+	public final fun setMaxPageSide (I)V
+	public final fun setOptions (Lio/github/andrewmalitchuk/uncial/model/source/options/OcrOptions;)V
+	public final fun setPageRange (Lkotlin/ranges/IntRange;)V
+	public final fun setPreferDigitalLayer (Z)V
+	public final fun setRasterColor (Lio/github/andrewmalitchuk/uncial/model/source/options/RasterColor;)V
+	public final fun setRasterizer (Lio/github/andrewmalitchuk/uncial/core/source/raster/PageRasterizer;)V
+	public final fun setRecognitionQuality (Lio/github/andrewmalitchuk/uncial/model/source/options/RecognitionQuality;)V
+	public final fun setRenderDpi (I)V
+}
+
+public final class io/github/andrewmalitchuk/uncial/runtime/source/client/UncialClientFactoryKt {
+	public static final fun UncialClient (Lkotlin/jvm/functions/Function1;)Lio/github/andrewmalitchuk/uncial/runtime/source/client/UncialClient;
+	public static synthetic fun UncialClient$default (Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/runtime/source/client/UncialClient;
+}
+
+public abstract interface class io/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress {
+}
+
+public final class io/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Done : io/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress {
+	public fun <init> (Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;)V
+	public final fun component1 ()Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;
+	public final fun copy (Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;)Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Done;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Done;Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Done;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDocument ()Lio/github/andrewmalitchuk/uncial/model/source/text/OcrDocument;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Page : io/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress {
+	public fun <init> (IIILio/github/andrewmalitchuk/uncial/model/source/text/OcrPage;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()Lio/github/andrewmalitchuk/uncial/model/source/text/OcrPage;
+	public final fun copy (IIILio/github/andrewmalitchuk/uncial/model/source/text/OcrPage;)Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Page;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Page;IIILio/github/andrewmalitchuk/uncial/model/source/text/OcrPage;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Page;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCompleted ()I
+	public final fun getFraction ()F
+	public final fun getIndex ()I
+	public final fun getOf ()I
+	public final fun getPage ()Lio/github/andrewmalitchuk/uncial/model/source/text/OcrPage;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Started : io/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress {
+	public fun <init> (ILio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;)V
+	public final fun component1 ()I
+	public final fun component2 ()Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public final fun copy (ILio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;)Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Started;
+	public static synthetic fun copy$default (Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Started;ILio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/runtime/source/progress/OcrProgress$Started;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPageCount ()I
+	public final fun getSource ()Lio/github/andrewmalitchuk/uncial/model/source/text/ExtractionSource;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+

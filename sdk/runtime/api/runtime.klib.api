@@ -1,0 +1,128 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-runtime>
+sealed interface io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress { // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress|null[0]
+    final class Done : io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress { // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done|null[0]
+        constructor <init>(io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument) // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done.<init>|<init>(io.github.andrewmalitchuk.uncial.model.source.text.OcrDocument){}[0]
+
+        final val document // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done.document|{}document[0]
+            final fun <get-document>(): io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done.document.<get-document>|<get-document>(){}[0]
+
+        final fun component1(): io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done.component1|component1(){}[0]
+        final fun copy(io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument = ...): io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done.copy|copy(io.github.andrewmalitchuk.uncial.model.source.text.OcrDocument){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Done.toString|toString(){}[0]
+    }
+
+    final class Page : io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress { // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page|null[0]
+        constructor <init>(kotlin/Int, kotlin/Int, kotlin/Int, io.github.andrewmalitchuk.uncial.model.source.text/OcrPage) // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Int;io.github.andrewmalitchuk.uncial.model.source.text.OcrPage){}[0]
+
+        final val completed // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.completed|{}completed[0]
+            final fun <get-completed>(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.completed.<get-completed>|<get-completed>(){}[0]
+        final val fraction // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.fraction|{}fraction[0]
+            final fun <get-fraction>(): kotlin/Float // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.fraction.<get-fraction>|<get-fraction>(){}[0]
+        final val index // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.index|{}index[0]
+            final fun <get-index>(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.index.<get-index>|<get-index>(){}[0]
+        final val of // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.of|{}of[0]
+            final fun <get-of>(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.of.<get-of>|<get-of>(){}[0]
+        final val page // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.page|{}page[0]
+            final fun <get-page>(): io.github.andrewmalitchuk.uncial.model.source.text/OcrPage // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.page.<get-page>|<get-page>(){}[0]
+
+        final fun component1(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.component1|component1(){}[0]
+        final fun component2(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.component2|component2(){}[0]
+        final fun component3(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.component3|component3(){}[0]
+        final fun component4(): io.github.andrewmalitchuk.uncial.model.source.text/OcrPage // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.component4|component4(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin/Int = ..., kotlin/Int = ..., io.github.andrewmalitchuk.uncial.model.source.text/OcrPage = ...): io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.copy|copy(kotlin.Int;kotlin.Int;kotlin.Int;io.github.andrewmalitchuk.uncial.model.source.text.OcrPage){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Page.toString|toString(){}[0]
+    }
+
+    final class Started : io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress { // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started|null[0]
+        constructor <init>(kotlin/Int, io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource) // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.<init>|<init>(kotlin.Int;io.github.andrewmalitchuk.uncial.model.source.text.ExtractionSource){}[0]
+
+        final val pageCount // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.pageCount|{}pageCount[0]
+            final fun <get-pageCount>(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.pageCount.<get-pageCount>|<get-pageCount>(){}[0]
+        final val source // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.source|{}source[0]
+            final fun <get-source>(): io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.source.<get-source>|<get-source>(){}[0]
+
+        final fun component1(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.component1|component1(){}[0]
+        final fun component2(): io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.component2|component2(){}[0]
+        final fun copy(kotlin/Int = ..., io.github.andrewmalitchuk.uncial.model.source.text/ExtractionSource = ...): io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.copy|copy(kotlin.Int;io.github.andrewmalitchuk.uncial.model.source.text.ExtractionSource){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress.Started.toString|toString(){}[0]
+    }
+}
+
+final class io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient : kotlin/AutoCloseable { // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient|null[0]
+    final val capabilities // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.capabilities|{}capabilities[0]
+        final fun <get-capabilities>(): io.github.andrewmalitchuk.uncial.core.source.engine/OcrCapabilities? // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.capabilities.<get-capabilities>|<get-capabilities>(){}[0]
+    final val hasDigitalTextLayerSupport // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.hasDigitalTextLayerSupport|{}hasDigitalTextLayerSupport[0]
+        final fun <get-hasDigitalTextLayerSupport>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.hasDigitalTextLayerSupport.<get-hasDigitalTextLayerSupport>|<get-hasDigitalTextLayerSupport>(){}[0]
+    final val isAvailable // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.isAvailable|{}isAvailable[0]
+        final fun <get-isAvailable>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.isAvailable.<get-isAvailable>|<get-isAvailable>(){}[0]
+    final val options // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.options|{}options[0]
+        final fun <get-options>(): io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.options.<get-options>|<get-options>(){}[0]
+
+    final fun close() // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.close|close(){}[0]
+    final fun extractAsFlow(io.github.andrewmalitchuk.uncial.core.source.raster/Raster): kotlinx.coroutines.flow/Flow<io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress> // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.extractAsFlow|extractAsFlow(io.github.andrewmalitchuk.uncial.core.source.raster.Raster){}[0]
+    final fun extractAsFlow(kotlin/ByteArray): kotlinx.coroutines.flow/Flow<io.github.andrewmalitchuk.uncial.runtime.source.progress/OcrProgress> // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.extractAsFlow|extractAsFlow(kotlin.ByteArray){}[0]
+    final suspend fun extract(io.github.andrewmalitchuk.uncial.core.source.raster/Raster): kotlin/Result<io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument> // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.extract|extract(io.github.andrewmalitchuk.uncial.core.source.raster.Raster){}[0]
+    final suspend fun extract(kotlin/ByteArray): kotlin/Result<io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument> // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.extract|extract(kotlin.ByteArray){}[0]
+    final suspend fun extractOrThrow(io.github.andrewmalitchuk.uncial.core.source.raster/Raster): io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.extractOrThrow|extractOrThrow(io.github.andrewmalitchuk.uncial.core.source.raster.Raster){}[0]
+    final suspend fun extractOrThrow(kotlin/ByteArray): io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient.extractOrThrow|extractOrThrow(kotlin.ByteArray){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder { // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder|null[0]
+    final var digitalTextExtractor // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.digitalTextExtractor|{}digitalTextExtractor[0]
+        final fun <get-digitalTextExtractor>(): io.github.andrewmalitchuk.uncial.core.source.engine/DigitalTextExtractor? // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.digitalTextExtractor.<get-digitalTextExtractor>|<get-digitalTextExtractor>(){}[0]
+        final fun <set-digitalTextExtractor>(io.github.andrewmalitchuk.uncial.core.source.engine/DigitalTextExtractor?) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.digitalTextExtractor.<set-digitalTextExtractor>|<set-digitalTextExtractor>(io.github.andrewmalitchuk.uncial.core.source.engine.DigitalTextExtractor?){}[0]
+    final var engine // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.engine|{}engine[0]
+        final fun <get-engine>(): io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory? // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.engine.<get-engine>|<get-engine>(){}[0]
+        final fun <set-engine>(io.github.andrewmalitchuk.uncial.core.source.engine/OcrEngineFactory?) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.engine.<set-engine>|<set-engine>(io.github.andrewmalitchuk.uncial.core.source.engine.OcrEngineFactory?){}[0]
+    final var includeWords // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.includeWords|{}includeWords[0]
+        final fun <get-includeWords>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.includeWords.<get-includeWords>|<get-includeWords>(){}[0]
+        final fun <set-includeWords>(kotlin/Boolean) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.includeWords.<set-includeWords>|<set-includeWords>(kotlin.Boolean){}[0]
+    final var languageData // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.languageData|{}languageData[0]
+        final fun <get-languageData>(): io.github.andrewmalitchuk.uncial.core.source.language/LanguageDataProvider? // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.languageData.<get-languageData>|<get-languageData>(){}[0]
+        final fun <set-languageData>(io.github.andrewmalitchuk.uncial.core.source.language/LanguageDataProvider?) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.languageData.<set-languageData>|<set-languageData>(io.github.andrewmalitchuk.uncial.core.source.language.LanguageDataProvider?){}[0]
+    final var languages // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.languages|{}languages[0]
+        final fun <get-languages>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.languages.<get-languages>|<get-languages>(){}[0]
+        final fun <set-languages>(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage>) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.languages.<set-languages>|<set-languages>(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>){}[0]
+    final var logger // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.logger|{}logger[0]
+        final fun <get-logger>(): io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.logger.<get-logger>|<get-logger>(){}[0]
+        final fun <set-logger>(io.github.andrewmalitchuk.uncial.core.source.log/OcrLogger) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.logger.<set-logger>|<set-logger>(io.github.andrewmalitchuk.uncial.core.source.log.OcrLogger){}[0]
+    final var maxPageSide // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.maxPageSide|{}maxPageSide[0]
+        final fun <get-maxPageSide>(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.maxPageSide.<get-maxPageSide>|<get-maxPageSide>(){}[0]
+        final fun <set-maxPageSide>(kotlin/Int) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.maxPageSide.<set-maxPageSide>|<set-maxPageSide>(kotlin.Int){}[0]
+    final var options // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.options|{}options[0]
+        final fun <get-options>(): io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions? // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.options.<get-options>|<get-options>(){}[0]
+        final fun <set-options>(io.github.andrewmalitchuk.uncial.model.source.options/OcrOptions?) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.options.<set-options>|<set-options>(io.github.andrewmalitchuk.uncial.model.source.options.OcrOptions?){}[0]
+    final var pageRange // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.pageRange|{}pageRange[0]
+        final fun <get-pageRange>(): kotlin.ranges/IntRange? // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.pageRange.<get-pageRange>|<get-pageRange>(){}[0]
+        final fun <set-pageRange>(kotlin.ranges/IntRange?) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.pageRange.<set-pageRange>|<set-pageRange>(kotlin.ranges.IntRange?){}[0]
+    final var preferDigitalLayer // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.preferDigitalLayer|{}preferDigitalLayer[0]
+        final fun <get-preferDigitalLayer>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.preferDigitalLayer.<get-preferDigitalLayer>|<get-preferDigitalLayer>(){}[0]
+        final fun <set-preferDigitalLayer>(kotlin/Boolean) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.preferDigitalLayer.<set-preferDigitalLayer>|<set-preferDigitalLayer>(kotlin.Boolean){}[0]
+    final var rasterColor // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.rasterColor|{}rasterColor[0]
+        final fun <get-rasterColor>(): io.github.andrewmalitchuk.uncial.model.source.options/RasterColor // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.rasterColor.<get-rasterColor>|<get-rasterColor>(){}[0]
+        final fun <set-rasterColor>(io.github.andrewmalitchuk.uncial.model.source.options/RasterColor) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.rasterColor.<set-rasterColor>|<set-rasterColor>(io.github.andrewmalitchuk.uncial.model.source.options.RasterColor){}[0]
+    final var rasterizer // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.rasterizer|{}rasterizer[0]
+        final fun <get-rasterizer>(): io.github.andrewmalitchuk.uncial.core.source.raster/PageRasterizer? // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.rasterizer.<get-rasterizer>|<get-rasterizer>(){}[0]
+        final fun <set-rasterizer>(io.github.andrewmalitchuk.uncial.core.source.raster/PageRasterizer?) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.rasterizer.<set-rasterizer>|<set-rasterizer>(io.github.andrewmalitchuk.uncial.core.source.raster.PageRasterizer?){}[0]
+    final var recognitionQuality // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.recognitionQuality|{}recognitionQuality[0]
+        final fun <get-recognitionQuality>(): io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.recognitionQuality.<get-recognitionQuality>|<get-recognitionQuality>(){}[0]
+        final fun <set-recognitionQuality>(io.github.andrewmalitchuk.uncial.model.source.options/RecognitionQuality) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.recognitionQuality.<set-recognitionQuality>|<set-recognitionQuality>(io.github.andrewmalitchuk.uncial.model.source.options.RecognitionQuality){}[0]
+    final var renderDpi // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.renderDpi|{}renderDpi[0]
+        final fun <get-renderDpi>(): kotlin/Int // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.renderDpi.<get-renderDpi>|<get-renderDpi>(){}[0]
+        final fun <set-renderDpi>(kotlin/Int) // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder.renderDpi.<set-renderDpi>|<set-renderDpi>(kotlin.Int){}[0]
+}
+
+final fun io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient(kotlin/Function1<io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClientBuilder, kotlin/Unit> = ...): io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient // io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient|UncialClient(kotlin.Function1<io.github.andrewmalitchuk.uncial.runtime.source.client.UncialClientBuilder,kotlin.Unit>){}[0]
