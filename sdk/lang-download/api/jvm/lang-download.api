@@ -1,0 +1,28 @@
+public abstract interface class io/github/andrewmalitchuk/uncial/lang/download/source/provider/DownloadingLanguageDataProvider : io/github/andrewmalitchuk/uncial/core/source/language/LanguageDataProvider {
+	public abstract fun clearCache (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun isCached (Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;)Z
+	public abstract fun prefetch (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class io/github/andrewmalitchuk/uncial/lang/download/source/provider/DownloadingLanguageDataProvider_jvmKt {
+	public static final fun downloadingLanguageDataProvider (Lio/github/andrewmalitchuk/uncial/lang/download/source/tessdata/TessDataSource;Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;)Lio/github/andrewmalitchuk/uncial/lang/download/source/provider/DownloadingLanguageDataProvider;
+	public static synthetic fun downloadingLanguageDataProvider$default (Lio/github/andrewmalitchuk/uncial/lang/download/source/tessdata/TessDataSource;Ljava/lang/String;Lio/github/andrewmalitchuk/uncial/core/source/log/OcrLogger;ILjava/lang/Object;)Lio/github/andrewmalitchuk/uncial/lang/download/source/provider/DownloadingLanguageDataProvider;
+}
+
+public final class io/github/andrewmalitchuk/uncial/lang/download/source/tessdata/TessDataSource {
+	public static final field Companion Lio/github/andrewmalitchuk/uncial/lang/download/source/tessdata/TessDataSource$Companion;
+	public static final field TESSDATA_BASE_URL Ljava/lang/String;
+	public static final field TESSDATA_FAST_BASE_URL Ljava/lang/String;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/util/Map;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun checksumFor (Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;)Ljava/lang/String;
+	public final fun getBaseUrl ()Ljava/lang/String;
+	public final fun getChecksums ()Ljava/util/Map;
+	public final fun urlFor (Lio/github/andrewmalitchuk/uncial/model/source/language/OcrLanguage;)Ljava/lang/String;
+}
+
+public final class io/github/andrewmalitchuk/uncial/lang/download/source/tessdata/TessDataSource$Companion {
+	public final fun getDEFAULT_CHECKSUMS ()Ljava/util/Map;
+}
+
