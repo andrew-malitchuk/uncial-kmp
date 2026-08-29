@@ -1,0 +1,148 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
+import java.security.MessageDigest
+
+plugins {
+    id("uncial.kmp.base")
+    id("uncial.target.ios")
+}
+
+// The iOS umbrella framework.
+//
+// iOS consumers cannot assemble a set of Gradle modules the way an Android consumer can:
+// they get one binary. So this module exists purely to bundle everything an iOS app needs
+// and re-export the types that appear in the public API.
+//
+// This is also where the engine rule stops applying: `runtime` must never see an engine,
+// but a DISTRIBUTION artifact is exactly the place they are allowed to meet. (PLAN.md §6.6)
+
+// The three iOS slices gathered into one artifact. KGP does the lipo of the two simulator
+// architectures and the xcodebuild -create-xcframework itself, which is the whole reason not
+// to hand-roll that shell script. (PUBLISHING.md §5)
+private val xcframework = XCFramework("Uncial")
+
+kotlin {
+    targets.withType<KotlinNativeTarget>().configureEach {
+        binaries.framework {
+            baseName = "Uncial"
+            xcframework.add(this)
+            // Static: nothing to embed-and-sign, no dSYM dance, and the linker drops what
+            // the app does not call. (PLAN.md §9.2)
+            isStatic = true
+
+            // Without `export`, Swift sees these types as opaque and cannot name
+            // OcrDocument or DocBlock at all.
+            export(projects.sdk.model)
+            export(projects.sdk.core)
+            export(projects.sdk.structure)
+            export(projects.sdk.runtime)
+            export(projects.sdk.engineVision)
+            export(projects.sdk.pdfText)
+        }
+    }
+
+    sourceSets {
+        commonMain.dependencies {
+            // `api`, not `implementation`: a dependency can only be exported if it is part
+            // of this module's own API surface.
+            api(projects.sdk.model)
+            api(projects.sdk.core)
+            api(projects.sdk.structure)
+            api(projects.sdk.runtime)
+            api(projects.sdk.engineVision)
+            api(projects.sdk.pdfText)
+        }
+    }
+}
+
+// ── The Swift package ──
+//
+// SPM consumes ONE artifact from a URL, not a Gradle project, so the release path is:
+// assemble the XCFramework, zip it, hash the zip, and write that hash into Package.swift.
+// The URL is predictable from the version, so the manifest can be written before the GitHub
+// Release exists -- which it has to be, because SPM reads Package.swift AT THE TAG.
+// (PUBLISHING.md §5)
+
+private val releaseXcframework = layout.buildDirectory.dir("XCFrameworks/release")
+
+private val zipXcframework = tasks.register<Zip>("zipXcframework") {
+    group = "uncial"
+    description = "Zips the release XCFramework into the artifact a Swift package consumes."
+
+    dependsOn("assembleUncialReleaseXCFramework")
+    from(releaseXcframework)
+
+    archiveFileName.set("Uncial-${project.version}.xcframework.zip")
+    destinationDirectory.set(layout.buildDirectory.dir("swift"))
+
+    // SPM verifies a checksum, so the same inputs must produce the same bytes; timestamps
+    // and directory order are the two things that otherwise differ between machines.
+    isPreserveFileTimestamps = false
+    isReproducibleFileOrder = true
+}
+
+/**
+ * Rewrites `Package.swift` at the repository root to point at this version's release asset.
+ *
+ * The checksum is a plain SHA-256 of the zip -- `swift package compute-checksum` computes
+ * exactly that, so Swift is not needed to produce it.
+ */
+private val updateSwiftPackage = tasks.register("updateSwiftPackage") {
+    group = "uncial"
+    description = "Regenerates Package.swift from the freshly built XCFramework zip."
+
+    val zipFile = zipXcframework.flatMap { it.archiveFile }
+    val manifest = rootProject.layout.projectDirectory.file("Package.swift")
+    val versionString = project.version.toString()
+    // A local, not a script property: a doLast lambda that captures a script-level value
+    // cannot be stored in the configuration cache.
+    val caveatAnchor = "the checksum is of that exact zip."
+
+    inputs.file(zipFile)
+    outputs.file(manifest)
+
+    doLast {
+        val zip = zipFile.get().asFile
+        // A snapshot has no GitHub Release and never will, so say so in the file rather than
+        // letting the next reader discover it as a 404.
+        val caveat = if (versionString.endsWith("-SNAPSHOT")) {
+            "\n// This is a SNAPSHOT manifest: the release asset it names does not exist. " +
+                "Regenerate\n// it on the release version before tagging."
+        } else {
+            ""
+        }
+        val checksum = MessageDigest.getInstance("SHA-256")
+            .digest(zip.readBytes())
+            .joinToString("") { byte -> "%02x".format(byte) }
+
+        manifest.asFile.writeText(
+            """
+            // swift-tools-version:5.7
+            // GENERATED by ./gradlew :dist:ios-framework:updateSwiftPackage -- do not edit by hand.
+            //
+            // Uncial ships to SPM as a prebuilt static XCFramework: the sources are Kotlin, so
+            // there is nothing here for SwiftPM to compile. The URL points at the GitHub Release
+            // asset for this version's tag, and the checksum is of that exact zip.
+            import PackageDescription
+
+            let package = Package(
+                name: "Uncial",
+                platforms: [.iOS(.v15)],
+                products: [
+                    .library(name: "Uncial", targets: ["Uncial"]),
+                ],
+                targets: [
+                    .binaryTarget(
+                        name: "Uncial",
+                        url: "https://github.com/andrew-malitchuk/uncial-kmp/releases/download/v$versionString/${zip.name}",
+                        checksum: "$checksum"
+                    ),
+                ]
+            )
+            """.trimIndent().replace(caveatAnchor, caveatAnchor + caveat) + "\n",
+        )
+
+        logger.lifecycle("Package.swift -> Uncial $versionString, checksum $checksum")
+        logger.lifecycle("zip: " + zip.absolutePath + " (" + (zip.length() / 1024 / 1024) + " MB)")
+    }
+}

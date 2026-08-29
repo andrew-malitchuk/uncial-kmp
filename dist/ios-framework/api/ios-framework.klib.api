@@ -1,0 +1,88 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.andrew-malitchuk:uncial-ios-framework>
+final class io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary { // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary|null[0]
+    constructor <init>(kotlin/String, kotlin/Int, kotlin/Int, kotlin/Int, kotlin/Float?, kotlin.collections/List<io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary>, kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock>) // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.<init>|<init>(kotlin.String;kotlin.Int;kotlin.Int;kotlin.Int;kotlin.Float?;kotlin.collections.List<io.github.andrewmalitchuk.uncial.dist.source.model.IosPageSummary>;kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.structure.DocBlock>){}[0]
+
+    final val blocks // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.blocks|{}blocks[0]
+        final fun <get-blocks>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock> // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.blocks.<get-blocks>|<get-blocks>(){}[0]
+    final val confidence // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.confidence|{}confidence[0]
+        final fun <get-confidence>(): kotlin/Float? // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.confidence.<get-confidence>|<get-confidence>(){}[0]
+    final val isEmpty // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.isEmpty|{}isEmpty[0]
+        final fun <get-isEmpty>(): kotlin/Boolean // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.isEmpty.<get-isEmpty>|<get-isEmpty>(){}[0]
+    final val lines // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.lines|{}lines[0]
+        final fun <get-lines>(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.lines.<get-lines>|<get-lines>(){}[0]
+    final val pageCount // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.pageCount|{}pageCount[0]
+        final fun <get-pageCount>(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.pageCount.<get-pageCount>|<get-pageCount>(){}[0]
+    final val pages // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.pages|{}pages[0]
+        final fun <get-pages>(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary> // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.pages.<get-pages>|<get-pages>(){}[0]
+    final val source // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.source|{}source[0]
+        final fun <get-source>(): kotlin/String // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.source.<get-source>|<get-source>(){}[0]
+    final val words // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.words|{}words[0]
+        final fun <get-words>(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.words.<get-words>|<get-words>(){}[0]
+
+    final fun component1(): kotlin/String // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.component1|component1(){}[0]
+    final fun component2(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.component2|component2(){}[0]
+    final fun component3(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.component3|component3(){}[0]
+    final fun component4(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.component4|component4(){}[0]
+    final fun component5(): kotlin/Float? // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.component5|component5(){}[0]
+    final fun component6(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary> // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.component6|component6(){}[0]
+    final fun component7(): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock> // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.component7|component7(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/Int = ..., kotlin/Int = ..., kotlin/Int = ..., kotlin/Float? = ..., kotlin.collections/List<io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary> = ..., kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock> = ...): io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.copy|copy(kotlin.String;kotlin.Int;kotlin.Int;kotlin.Int;kotlin.Float?;kotlin.collections.List<io.github.andrewmalitchuk.uncial.dist.source.model.IosPageSummary>;kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.structure.DocBlock>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary.toString|toString(){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary { // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary|null[0]
+    constructor <init>(kotlin/Int, kotlin/Int, kotlin/Float?) // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Float?){}[0]
+
+    final val confidence // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.confidence|{}confidence[0]
+        final fun <get-confidence>(): kotlin/Float? // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.confidence.<get-confidence>|<get-confidence>(){}[0]
+    final val lines // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.lines|{}lines[0]
+        final fun <get-lines>(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.lines.<get-lines>|<get-lines>(){}[0]
+    final val number // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.number|{}number[0]
+        final fun <get-number>(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.number.<get-number>|<get-number>(){}[0]
+
+    final fun component1(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.component1|component1(){}[0]
+    final fun component2(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.component2|component2(){}[0]
+    final fun component3(): kotlin/Float? // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.component3|component3(){}[0]
+    final fun copy(kotlin/Int = ..., kotlin/Int = ..., kotlin/Float? = ...): io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.copy|copy(kotlin.Int;kotlin.Int;kotlin.Float?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.dist.source.model/IosPageSummary.toString|toString(){}[0]
+}
+
+final class io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress { // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress|null[0]
+    constructor <init>(kotlin/Int, kotlin/Int, kotlin/String?) // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.String?){}[0]
+
+    final val completed // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.completed|{}completed[0]
+        final fun <get-completed>(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.completed.<get-completed>|<get-completed>(){}[0]
+    final val source // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.source|{}source[0]
+        final fun <get-source>(): kotlin/String? // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.source.<get-source>|<get-source>(){}[0]
+    final val total // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.total|{}total[0]
+        final fun <get-total>(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.total.<get-total>|<get-total>(){}[0]
+
+    final fun component1(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.component1|component1(){}[0]
+    final fun component2(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.component2|component2(){}[0]
+    final fun component3(): kotlin/String? // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.component3|component3(){}[0]
+    final fun copy(kotlin/Int = ..., kotlin/Int = ..., kotlin/String? = ...): io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.copy|copy(kotlin.Int;kotlin.Int;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress.toString|toString(){}[0]
+}
+
+final object io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos { // io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos|null[0]
+    final fun createClient(kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.language/OcrLanguage> = ..., kotlin/Int = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Function1<kotlin/String, kotlin/Unit>? = ...): io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient // io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos.createClient|createClient(kotlin.collections.List<io.github.andrewmalitchuk.uncial.model.source.language.OcrLanguage>;kotlin.Int;kotlin.Boolean;kotlin.Boolean;kotlin.Function1<kotlin.String,kotlin.Unit>?){}[0]
+    final fun reconstruct(io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument): kotlin.collections/List<io.github.andrewmalitchuk.uncial.model.source.structure/DocBlock> // io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos.reconstruct|reconstruct(io.github.andrewmalitchuk.uncial.model.source.text.OcrDocument){}[0]
+    final fun registeredEngines(): kotlin.collections/List<kotlin/String> // io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos.registeredEngines|registeredEngines(){}[0]
+    final fun start() // io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos.start|start(){}[0]
+    final fun summarize(io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument): io.github.andrewmalitchuk.uncial.dist.source.model/IosDocumentSummary // io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos.summarize|summarize(io.github.andrewmalitchuk.uncial.model.source.text.OcrDocument){}[0]
+    final suspend fun extract(io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient, platform.Foundation/NSData, kotlin/Function1<io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress, kotlin/Unit>): io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument // io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos.extract|extract(io.github.andrewmalitchuk.uncial.runtime.source.client.UncialClient;platform.Foundation.NSData;kotlin.Function1<io.github.andrewmalitchuk.uncial.dist.source.model.IosRunProgress,kotlin.Unit>){}[0]
+    final suspend fun extract(io.github.andrewmalitchuk.uncial.runtime.source.client/UncialClient, platform.UIKit/UIImage, kotlin/Function1<io.github.andrewmalitchuk.uncial.dist.source.model/IosRunProgress, kotlin/Unit>): io.github.andrewmalitchuk.uncial.model.source.text/OcrDocument // io.github.andrewmalitchuk.uncial.dist.source.bootstrap/UncialIos.extract|extract(io.github.andrewmalitchuk.uncial.runtime.source.client.UncialClient;platform.UIKit.UIImage;kotlin.Function1<io.github.andrewmalitchuk.uncial.dist.source.model.IosRunProgress,kotlin.Unit>){}[0]
+}
