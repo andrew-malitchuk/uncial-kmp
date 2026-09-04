@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The one directory the camera app is allowed to write into.
+
+  Deliberately narrow: a FileProvider grants access to everything under the paths it
+  declares, so `<cache-path path="." />` would hand any app that receives a URI from us the
+  run of the whole cache directory.
+-->
+<paths>
+    <cache-path name="camera" path="camera/" />
+</paths>

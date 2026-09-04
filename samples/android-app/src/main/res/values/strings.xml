@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Every user-visible string lives here rather than inline in the composables.
+
+  Nothing in this sample is translated, so the immediate benefit is small. But a sample is
+  read as a template, and inline literals are the habit that makes the first translation a
+  refactor instead of a new file.
+-->
+<resources>
+    <string name="app_name">Uncial</string>
+
+    <!-- Welcome: the one screen that spends the gradient. -->
+    <string name="welcome_title">Welcome to Uncial</string>
+    <string name="welcome_body">On-device OCR that gives you pages, lines and words — with boxes and confidence. Nothing leaves the device.</string>
+    <string name="action_get_started">Get started</string>
+
+    <!-- Home: everything the SDK can be handed. -->
+    <string name="home_title">What should we read today?</string>
+    <string name="home_body">Pick a bundled sample, open a PDF, or point the camera at a page.</string>
+    <string name="section_documents">Documents</string>
+    <string name="source_scanned_title">Scanned fixture</string>
+    <string name="source_scanned_subtitle">Image-only Ukrainian PDF · bundled</string>
+    <string name="source_digital_title">Digital fixture</string>
+    <string name="source_digital_subtitle">PDF with a text layer · bundled</string>
+    <string name="source_pick_title">Open a PDF…</string>
+    <string name="source_pick_subtitle">Anything the file picker can reach</string>
+    <string name="badge_ocr">OCR</string>
+    <string name="badge_fast_path">fast path</string>
+    <string name="section_images">Images</string>
+    <string name="section_images_trailing">no PDF involved</string>
+    <string name="action_photo">Photo…</string>
+    <string name="action_gallery">Gallery…</string>
+    <string name="images_note">A photo goes straight to the recognizer as a Raster. Orientation and size are handled here, in the app — the SDK does not rescale an image you supply.</string>
+    <string name="no_camera">No camera app on this device; the gallery still works.</string>
+    <string name="section_result">Last result</string>
+    <string name="section_result_trailing">%1$d ms</string>
+    <string name="result_subtitle">%1$d pages · %2$d lines · %3$d blocks</string>
+
+    <!-- How a result was produced. ExtractionSource, in words. -->
+    <string name="source_ocr">recognized by the engine</string>
+    <string name="source_digital_layer">read from the text layer</string>
+    <string name="source_mixed">mixed: some pages read, some recognized</string>
+    <string name="source_unknown">unknown path</string>
+
+    <!-- Progress: pages, because that is the unit the SDK reports and cancels on. -->
+    <string name="progress_of_pages">of %1$d pages</string>
+    <string name="progress_opening">opening…</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="progress_cancel_note">Cancellation is cooperative: the engine finishes unwinding the page it is on.</string>
+
+    <!-- Document: the result, as structure rather than as a string. -->
+    <string name="document_meta">%1$d pages · %2$s · %3$d ms</string>
+    <string name="stat_lines">LINES</string>
+    <string name="stat_words">WORDS</string>
+    <string name="stat_confidence">CONF</string>
+    <string name="section_confidence">Confidence by page</string>
+    <string name="section_confidence_trailing">empty = not reported</string>
+    <string name="section_structure">Structure</string>
+    <string name="section_structure_trailing">%1$d blocks</string>
+    <string name="block_heading_meta">DocBlock.Heading · level %1$d</string>
+    <string name="block_paragraph_meta">DocBlock.Paragraph</string>
+    <string name="document_none_title">Nothing recognized yet</string>
+    <string name="document_none_body">Pick a source on the home screen. The result lands here: counts, per-page confidence, and the headings and paragraphs DocumentStructure reconstructed.</string>
+    <string name="document_empty_title">No text on any page</string>
+    <string name="document_empty_body">A valid result, not a failure: the engine read the pages and found nothing it could recognize. A photo taken at an angle or in poor light is the usual reason.</string>
+
+    <!-- Device: the honest matrix. -->
+    <string name="device_title">What this device can actually do</string>
+    <string name="device_body">Reported by UncialClient.capabilities, never assumed. The same code on iOS reports a different set.</string>
+    <string name="section_engine">Engine</string>
+    <string name="engine_meta">version %1$s · registered through androidx.startup</string>
+    <string name="unknown_version">unknown</string>
+    <string name="chip_digital_layer">digital text layer</string>
+    <string name="chip_no_digital_layer">no digital text layer</string>
+    <string name="engine_languages_note">Optimistic: these are the languages the engine would use with these options. Which ones it really has depends on the uncial-lang-* artifacts present, and that needs I/O.</string>
+    <string name="section_matrix">Capabilities</string>
+    <string name="capability_words">Word boxes</string>
+    <string name="capability_words_note">Per-word geometry and confidence, when includeWords is on.</string>
+    <string name="capability_confidence">Confidence</string>
+    <string name="capability_language">Per-line language</string>
+    <string name="capability_language_note">Use OcrLine.script instead: derived from the text, so always available.</string>
+    <string name="capability_orientation">Orientation</string>
+    <string name="capability_skew">Skew</string>
+    <string name="matrix_note">The JVM binding of the same engine reports all five. That is a difference between bindings, not between engines — and precisely why the capability type exists.</string>
+    <string name="no_engine">No OCR engine available on this device.</string>
+    <string name="no_engine_body">The Tesseract engine registers itself through androidx.startup. If the app removed InitializationProvider from its merged manifest, nothing registered.</string>
+
+    <!-- Navigation. A stack, not tabs: one action out to the device screen, back to Home. -->
+    <string name="action_device">Device</string>
+    <string name="title_recognizing">Recognizing</string>
+    <string name="title_result">Result</string>
+</resources>
