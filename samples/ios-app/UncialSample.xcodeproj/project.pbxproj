@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0260F3F27B854F1535E88D56 /* SourceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B50B552988595EBA26E873 /* SourceCard.swift */; };
+		067750F666CA0487206ED50B /* sample-scan.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C36E08D064BD22F61256A80 /* sample-scan.pdf */; };
+		0AAA17F15820D8DE3DE7C77B /* DocumentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF5211BF66249F5882CF47 /* DocumentScreen.swift */; };
+		14665AFC1C514DE6C8B718F8 /* UncialSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740BA721387E233EAD30AD49 /* UncialSampleApp.swift */; };
+		1C56AA39D71451EB0F856289 /* sample-digital.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6F546FD2658A639577100353 /* sample-digital.pdf */; };
+		1E1D9D58B379DA6A1D1CA0AC /* OcrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFE7D1708C7C300F1A3612 /* OcrModel.swift */; };
+		22F1BAD093C4F7CF029DCCDE /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B670957723EDCC68CF8C6E /* PillButton.swift */; };
+		23A5EAC462FDCA90CF8F0D54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3C5F54B98D2E473793881 /* ContentView.swift */; };
+		27CB8E5B1AD24BBE771D5C57 /* ProgressScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34BACDB273F041451A0DFE8 /* ProgressScreen.swift */; };
+		45C44F4D8D30BCA235E5F106 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76FCED497BBAB7DBE65BEB06 /* Inter-Medium.ttf */; };
+		4DE9BA12FAEA75E19AFB0271 /* Fraunces-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C8601F790F2E8F3B6D6200 /* Fraunces-SemiBold.ttf */; };
+		512D606CDCF87EDFB28A5F59 /* AppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634ABA29B60933AB6DDE0A03 /* AppCard.swift */; };
+		5CF7CFB7F1755E50CB170121 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F540C3F363C081F1098658FF /* Inter-SemiBold.ttf */; };
+		5D2A70F1C48B39E60A1D7F35 /* ImagePickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E1B740A25D6F84E71C0B2 /* ImagePickers.swift */; };
+		604FF5B02DB8BB18FCF5331B /* PageConfidenceChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90738171DE4ECAF709A5D015 /* PageConfidenceChart.swift */; };
+		7226710CB4DFD423B1B805BE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AAF7D9864C1EE2325A2783 /* Theme.swift */; };
+		77BD5F1739DA69E1CFB47810 /* BlockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E2D0CD9477C65C969EB38C /* BlockRow.swift */; };
+		7873BA155D1F01860C72981F /* CapabilityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE62ECE4B618FA2D11FC66FF /* CapabilityList.swift */; };
+		7D2266192A244D5FF3797CA4 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63E15A94B5C91ADD1B67414 /* Chip.swift */; };
+		8CEFAF39A9990A18BAB5EE88 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD53BBBD0F6E8C1834690E89 /* Inter-Regular.ttf */; };
+		93FC5A9E1C372394FBAD5749 /* AppTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258C7A63EC1D3CBEDE87B83 /* AppTopBar.swift */; };
+		B3688EB4900E48A75B7CEE27 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A279B5A489185157207A13 /* SectionHeader.swift */; };
+		BB53B86C5CB250E3E1694F34 /* DeviceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196A124CE1B187837A6571E8 /* DeviceScreen.swift */; };
+		DB8155328B15932D91360840 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C48CE102FD5B48C1F6868E /* HomeScreen.swift */; };
+		E120AFB74B3F9D16D2E49169 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3961B83C3D2438B32206BC2D /* WelcomeScreen.swift */; };
+		E72FF517ECD536FBDA3C00F8 /* StatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A449AC346D934C576A8A38F /* StatRow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08E2D0CD9477C65C969EB38C /* BlockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlockRow.swift; path = UncialSample/Kit/BlockRow.swift; sourceTree = SOURCE_ROOT; };
+		196A124CE1B187837A6571E8 /* DeviceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceScreen.swift; path = UncialSample/Screens/DeviceScreen.swift; sourceTree = SOURCE_ROOT; };
+		3961B83C3D2438B32206BC2D /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeScreen.swift; path = UncialSample/Screens/WelcomeScreen.swift; sourceTree = SOURCE_ROOT; };
+		3C9E1B740A25D6F84E71C0B2 /* ImagePickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickers.swift; sourceTree = "<group>"; };
+		4258C7A63EC1D3CBEDE87B83 /* AppTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTopBar.swift; path = UncialSample/Kit/AppTopBar.swift; sourceTree = SOURCE_ROOT; };
+		47C48CE102FD5B48C1F6868E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreen.swift; path = UncialSample/Screens/HomeScreen.swift; sourceTree = SOURCE_ROOT; };
+		4C36E08D064BD22F61256A80 /* sample-scan.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "sample-scan.pdf"; sourceTree = "<group>"; };
+		52B50B552988595EBA26E873 /* SourceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SourceCard.swift; path = UncialSample/Kit/SourceCard.swift; sourceTree = SOURCE_ROOT; };
+		57AAF7D9864C1EE2325A2783 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = UncialSample/Theme/Theme.swift; sourceTree = SOURCE_ROOT; };
+		5A449AC346D934C576A8A38F /* StatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatRow.swift; path = UncialSample/Kit/StatRow.swift; sourceTree = SOURCE_ROOT; };
+		61BF5211BF66249F5882CF47 /* DocumentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DocumentScreen.swift; path = UncialSample/Screens/DocumentScreen.swift; sourceTree = SOURCE_ROOT; };
+		634ABA29B60933AB6DDE0A03 /* AppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppCard.swift; path = UncialSample/Kit/AppCard.swift; sourceTree = SOURCE_ROOT; };
+		6A76AF4ABC351300B5EFF486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F546FD2658A639577100353 /* sample-digital.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "sample-digital.pdf"; sourceTree = "<group>"; };
+		740BA721387E233EAD30AD49 /* UncialSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncialSampleApp.swift; sourceTree = "<group>"; };
+		75E8CD0CD33F8F8F6B34AFFF /* UncialSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UncialSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76FCED497BBAB7DBE65BEB06 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Medium.ttf"; path = "UncialSample/Fonts/Inter-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		84D3C5F54B98D2E473793881 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85B670957723EDCC68CF8C6E /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PillButton.swift; path = UncialSample/Kit/PillButton.swift; sourceTree = SOURCE_ROOT; };
+		90738171DE4ECAF709A5D015 /* PageConfidenceChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageConfidenceChart.swift; path = UncialSample/Kit/PageConfidenceChart.swift; sourceTree = SOURCE_ROOT; };
+		A1A279B5A489185157207A13 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionHeader.swift; path = UncialSample/Kit/SectionHeader.swift; sourceTree = SOURCE_ROOT; };
+		A63E15A94B5C91ADD1B67414 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chip.swift; path = UncialSample/Kit/Chip.swift; sourceTree = SOURCE_ROOT; };
+		BD53BBBD0F6E8C1834690E89 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Regular.ttf"; path = "UncialSample/Fonts/Inter-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		D34BACDB273F041451A0DFE8 /* ProgressScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressScreen.swift; path = UncialSample/Screens/ProgressScreen.swift; sourceTree = SOURCE_ROOT; };
+		E5C8601F790F2E8F3B6D6200 /* Fraunces-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fraunces-SemiBold.ttf"; path = "UncialSample/Fonts/Fraunces-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
+		F4AFE7D1708C7C300F1A3612 /* OcrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcrModel.swift; sourceTree = "<group>"; };
+		F540C3F363C081F1098658FF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-SemiBold.ttf"; path = "UncialSample/Fonts/Inter-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
+		FE62ECE4B618FA2D11FC66FF /* CapabilityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CapabilityList.swift; path = UncialSample/Kit/CapabilityList.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61BA816DAAB801CED169F301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		632A8BA9181411DED1A71C35 = {
+			isa = PBXGroup;
+			children = (
+				F2D52E1A7C13488AC9EA1FB5 /* UncialSample */,
+				68AAAF81AC9F7EF75017C3D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68AAAF81AC9F7EF75017C3D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75E8CD0CD33F8F8F6B34AFFF /* UncialSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2D52E1A7C13488AC9EA1FB5 /* UncialSample */ = {
+			isa = PBXGroup;
+			children = (
+				740BA721387E233EAD30AD49 /* UncialSampleApp.swift */,
+				84D3C5F54B98D2E473793881 /* ContentView.swift */,
+				F4AFE7D1708C7C300F1A3612 /* OcrModel.swift */,
+				3C9E1B740A25D6F84E71C0B2 /* ImagePickers.swift */,
+				4C36E08D064BD22F61256A80 /* sample-scan.pdf */,
+				6F546FD2658A639577100353 /* sample-digital.pdf */,
+				57AAF7D9864C1EE2325A2783 /* Theme.swift */,
+				85B670957723EDCC68CF8C6E /* PillButton.swift */,
+				A63E15A94B5C91ADD1B67414 /* Chip.swift */,
+				634ABA29B60933AB6DDE0A03 /* AppCard.swift */,
+				A1A279B5A489185157207A13 /* SectionHeader.swift */,
+				4258C7A63EC1D3CBEDE87B83 /* AppTopBar.swift */,
+				52B50B552988595EBA26E873 /* SourceCard.swift */,
+				5A449AC346D934C576A8A38F /* StatRow.swift */,
+				90738171DE4ECAF709A5D015 /* PageConfidenceChart.swift */,
+				08E2D0CD9477C65C969EB38C /* BlockRow.swift */,
+				FE62ECE4B618FA2D11FC66FF /* CapabilityList.swift */,
+				3961B83C3D2438B32206BC2D /* WelcomeScreen.swift */,
+				47C48CE102FD5B48C1F6868E /* HomeScreen.swift */,
+				D34BACDB273F041451A0DFE8 /* ProgressScreen.swift */,
+				61BF5211BF66249F5882CF47 /* DocumentScreen.swift */,
+				196A124CE1B187837A6571E8 /* DeviceScreen.swift */,
+				E5C8601F790F2E8F3B6D6200 /* Fraunces-SemiBold.ttf */,
+				BD53BBBD0F6E8C1834690E89 /* Inter-Regular.ttf */,
+				76FCED497BBAB7DBE65BEB06 /* Inter-Medium.ttf */,
+				F540C3F363C081F1098658FF /* Inter-SemiBold.ttf */,
+				6A76AF4ABC351300B5EFF486 /* Info.plist */,
+			);
+			path = UncialSample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0BE469BA5CE5EB8DE650E518 /* UncialSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 286B6DF56E3401BFFF7C19AB /* Build configuration list for PBXNativeTarget "UncialSample" */;
+			buildPhases = (
+				BFE5779803688B9E4524446B /* Build Uncial framework */,
+				D3B5D219E6DE1E895E30199A /* Sources */,
+				61BA816DAAB801CED169F301 /* Frameworks */,
+				0D298A334CB5AC885A3E3A66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UncialSample;
+			productName = UncialSample;
+			productReference = 75E8CD0CD33F8F8F6B34AFFF /* UncialSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A9D7A1F0974331D9FF61F1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0BE469BA5CE5EB8DE650E518 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 548AD0631BE0DFCB2D7B45D2 /* Build configuration list for PBXProject "UncialSample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 632A8BA9181411DED1A71C35;
+			productRefGroup = 68AAAF81AC9F7EF75017C3D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BE469BA5CE5EB8DE650E518 /* UncialSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D298A334CB5AC885A3E3A66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				067750F666CA0487206ED50B /* sample-scan.pdf in Resources */,
+				1C56AA39D71451EB0F856289 /* sample-digital.pdf in Resources */,
+				4DE9BA12FAEA75E19AFB0271 /* Fraunces-SemiBold.ttf in Resources */,
+				8CEFAF39A9990A18BAB5EE88 /* Inter-Regular.ttf in Resources */,
+				45C44F4D8D30BCA235E5F106 /* Inter-Medium.ttf in Resources */,
+				5CF7CFB7F1755E50CB170121 /* Inter-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BFE5779803688B9E4524446B /* Build Uncial framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Uncial framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\n# Xcode's environment shadows JAVA_HOME with whatever the IDE was launched with; AGP and\n# KGP do not support JDK 25, which is this machine's default.\nunset JAVA_HOME\n\ncase \"$PLATFORM_NAME\" in\n  iphonesimulator) KOTLIN_TARGET=IosSimulatorArm64 ;;\n  iphoneos)        KOTLIN_TARGET=IosArm64 ;;\n  *) echo \"unsupported platform $PLATFORM_NAME\" >&2; exit 1 ;;\nesac\n\ncase \"$CONFIGURATION\" in\n  Release) KOTLIN_CONFIG=Release ;;\n  *)       KOTLIN_CONFIG=Debug ;;\nesac\n\nREPO=\"$SRCROOT/../..\"\n\"$REPO/gradlew\" -p \"$REPO\" \\\n  \":dist:ios-framework:link${KOTLIN_CONFIG}Framework${KOTLIN_TARGET}\"\n\n# Stage it where FRAMEWORK_SEARCH_PATHS points, so the search path needs no conditionals.\nSOURCE_DIR=\"$REPO/dist/ios-framework/build/bin/$(echo \"$KOTLIN_TARGET\" | \\\n  awk '{ print tolower(substr($0,1,1)) substr($0,2) }')/$(echo \"$KOTLIN_CONFIG\" | \\\n  awk '{ print tolower($0) }')Framework\"\n\nSTAGE_DIR=\"$SRCROOT/build/framework\"\nrm -rf \"$STAGE_DIR\"\nmkdir -p \"$STAGE_DIR\"\ncp -R \"$SOURCE_DIR/Uncial.framework\" \"$STAGE_DIR/\"\necho \"staged $STAGE_DIR/Uncial.framework\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3B5D219E6DE1E895E30199A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14665AFC1C514DE6C8B718F8 /* UncialSampleApp.swift in Sources */,
+				23A5EAC462FDCA90CF8F0D54 /* ContentView.swift in Sources */,
+				1E1D9D58B379DA6A1D1CA0AC /* OcrModel.swift in Sources */,
+				5D2A70F1C48B39E60A1D7F35 /* ImagePickers.swift in Sources */,
+				7226710CB4DFD423B1B805BE /* Theme.swift in Sources */,
+				22F1BAD093C4F7CF029DCCDE /* PillButton.swift in Sources */,
+				7D2266192A244D5FF3797CA4 /* Chip.swift in Sources */,
+				512D606CDCF87EDFB28A5F59 /* AppCard.swift in Sources */,
+				B3688EB4900E48A75B7CEE27 /* SectionHeader.swift in Sources */,
+				93FC5A9E1C372394FBAD5749 /* AppTopBar.swift in Sources */,
+				0260F3F27B854F1535E88D56 /* SourceCard.swift in Sources */,
+				E72FF517ECD536FBDA3C00F8 /* StatRow.swift in Sources */,
+				604FF5B02DB8BB18FCF5331B /* PageConfidenceChart.swift in Sources */,
+				77BD5F1739DA69E1CFB47810 /* BlockRow.swift in Sources */,
+				7873BA155D1F01860C72981F /* CapabilityList.swift in Sources */,
+				E120AFB74B3F9D16D2E49169 /* WelcomeScreen.swift in Sources */,
+				DB8155328B15932D91360840 /* HomeScreen.swift in Sources */,
+				27CB8E5B1AD24BBE771D5C57 /* ProgressScreen.swift in Sources */,
+				0AAA17F15820D8DE3DE7C77B /* DocumentScreen.swift in Sources */,
+				BB53B86C5CB250E3E1694F34 /* DeviceScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		44DBFE231E5DE5E54BE51F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SGVMNFK2ZP;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/build/framework";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = UncialSample/Info.plist;
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Uncial,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.andrewmalitchuk.uncial.samples.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		9DB336CD307F5E1D15A8B039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphonesimulator*]" = arm64;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7EB956F11A56D8F0C30CAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SGVMNFK2ZP;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/build/framework";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = UncialSample/Info.plist;
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Uncial,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.andrewmalitchuk.uncial.samples.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		DD37BACFFC1229F6547C661D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphonesimulator*]" = arm64;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		286B6DF56E3401BFFF7C19AB /* Build configuration list for PBXNativeTarget "UncialSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7EB956F11A56D8F0C30CAFF /* Debug */,
+				44DBFE231E5DE5E54BE51F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		548AD0631BE0DFCB2D7B45D2 /* Build configuration list for PBXProject "UncialSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD37BACFFC1229F6547C661D /* Debug */,
+				9DB336CD307F5E1D15A8B039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A9D7A1F0974331D9FF61F1F /* Project object */;
+}
