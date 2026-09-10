@@ -1,0 +1,112 @@
+site_name: Uncial
+site_description: On-device OCR for Kotlin Multiplatform — PDFs and images to structured documents
+site_url: https://andrew-malitchuk.github.io/uncial-kmp/
+repo_name: andrew-malitchuk/uncial-kmp
+repo_url: https://github.com/andrew-malitchuk/uncial-kmp
+edit_uri: edit/development/
+
+docs_dir: docs
+
+theme:
+  name: material
+  # The same mark the README carries. It is black, and the header is dark in both schemes,
+  # so docs/stylesheets/uncial.css inverts it to white -- see `.md-logo img`.
+  logo: img/img_logo.png
+  favicon: img/img_logo.png
+  palette:
+    # One palette for the SDK, not two: these schemes are the sample app's tokens
+    # (docs/stylesheets/uncial.css), so the docs and the app look like one product.
+    - scheme: uncial
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: uncial-dark
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  font:
+    # Inter is the sample's interface font; Fraunces sets headings through the stylesheet,
+    # because Material takes only one text family.
+    text: Inter
+    code: JetBrains Mono
+
+extra_css:
+  - stylesheets/uncial.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/andrew-malitchuk/uncial-kmp
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+    - Language Data: language-data.md
+  - Guide:
+    - Input — PDFs and Images: guide/input.md
+    - Options: guide/options.md
+    - Progress and Cancellation: guide/progress-and-cancellation.md
+    - Errors: guide/errors.md
+    - Document Structure: guide/structure.md
+    - Coordinates: guide/coordinates.md
+    - Testing with the Fake Engine: guide/testing.md
+  - Platforms:
+    - Capabilities: platforms/capabilities.md
+    - Android: platforms/android.md
+    - iOS: platforms/ios.md
+    - JVM: platforms/jvm.md
+  - Architecture:
+    - Overview: architecture/overview.md
+    - Engine Registry: architecture/engine-registry.md
+  - Modules:
+    - model: modules/model.md
+    - core: modules/core.md
+    - runtime: modules/runtime.md
+    - raster: modules/raster.md
+    - pdf-text: modules/pdf-text.md
+    - structure: modules/structure.md
+    - engine-tesseract: modules/engine-tesseract.md
+    - engine-vision: modules/engine-vision.md
+    - engine-fake: modules/engine-fake.md
+    - lang-ukr: modules/lang-ukr.md
+    - lang-eng: modules/lang-eng.md
+    - lang-download: modules/lang-download.md
+    - ios-framework: modules/ios-framework.md
+    - build-logic: modules/build-logic.md
+  - Samples: samples.md
+  - Roadmap: roadmap.md
