@@ -3,7 +3,7 @@ site_description: On-device OCR for Kotlin Multiplatform — PDFs and images to 
 site_url: https://andrew-malitchuk.github.io/uncial-kmp/
 repo_name: andrew-malitchuk/uncial-kmp
 repo_url: https://github.com/andrew-malitchuk/uncial-kmp
-edit_uri: edit/development/
+edit_uri: edit/docs-site/docs/
 
 docs_dir: docs
 
