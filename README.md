@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/img/img_logo.png" alt="Uncial" width="160"/>
+  <img src="assets/img_logo.png" alt="Uncial" width="160"/>
 </p>
 
 # Uncial
