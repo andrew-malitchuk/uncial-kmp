@@ -30,3 +30,13 @@ site/
 # so the whole directory stays out of git -- same rule as axiom-sdk.
 /configure/signing/*
 **/secrets.properties
+
+# Working documents, kept locally and out of the published history
+/PLAN.md
+/PUBLISHING.md
+/sample-app-design.html
+
+# The MkDocs site lives on the gh-pages branch, not here
+/docs/
+/mkdocs.yml
+/requirements-docs.txt
