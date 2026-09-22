@@ -4,8 +4,6 @@
 // Uncial ships to SPM as a prebuilt static XCFramework: the sources are Kotlin, so
 // there is nothing here for SwiftPM to compile. The URL points at the GitHub Release
 // asset for this version's tag, and the checksum is of that exact zip.
-// This is a SNAPSHOT manifest: the release asset it names does not exist. Regenerate
-// it on the release version before tagging.
 import PackageDescription
 
 let package = Package(
@@ -17,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Uncial",
-            url: "https://github.com/andrew-malitchuk/uncial-kmp/releases/download/v0.1.0-SNAPSHOT/Uncial-0.1.0-SNAPSHOT.xcframework.zip",
-            checksum: "2f01c54f1a7fccff76fca2f99581fa5b6a5ebb2da119645101c1a8c4efe56a95"
+            url: "https://github.com/andrew-malitchuk/uncial-kmp/releases/download/v0.0.1/Uncial-0.0.1.xcframework.zip",
+            checksum: "989f142dff2f021f7031d0529a066deb9624f6bfb693ddb46e6d42a54a7a3e7b"
         ),
     ]
 )
