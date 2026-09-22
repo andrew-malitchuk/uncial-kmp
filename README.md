@@ -184,18 +184,45 @@ git clone https://github.com/andrew-malitchuk/uncial-kmp.git
 
 For iOS, open `samples/ios-app/UncialSample.xcodeproj` in Xcode and run — its first build phase links the framework for you.
 
-### Coordinates (once published)
+### Android / JVM — Maven coordinates (once published)
 
 ```kotlin
 dependencies {
     implementation("io.github.andrew-malitchuk:uncial-runtime:<version>")
     implementation("io.github.andrew-malitchuk:uncial-engine-tesseract:<version>")  // Android / JVM
-    implementation("io.github.andrew-malitchuk:uncial-engine-vision:<version>")     // iOS
     implementation("io.github.andrew-malitchuk:uncial-lang-ukr:<version>")          // language data
     implementation("io.github.andrew-malitchuk:uncial-structure:<version>")         // optional
     implementation("io.github.andrew-malitchuk:uncial-pdf-text:<version>")          // optional
 }
 ```
+
+`uncial-engine-tesseract`'s POM references `tesseract4android`, which is published on
+JitPack only — add its repository, scoped to `com.github.adaptech-cz`, or resolution fails.
+
+### iOS — Swift Package Manager (once released)
+
+In Xcode: *File → Add Package Dependencies…*, then the repository URL:
+
+```
+https://github.com/andrew-malitchuk/uncial-kmp.git
+```
+
+"Up to Next Major" from `<version>`. Then:
+
+```swift
+import Uncial
+
+UncialBootstrap.shared.start()
+let client = UncialBootstrap.shared.createClient(...)
+```
+
+`Package.swift` at the repository root is a binary target pinned by SHA-256 to a zipped
+XCFramework attached to the matching GitHub Release — SwiftPM downloads and verifies it, no
+Gradle or Kotlin toolchain needed on the consumer side. `uncial-engine-vision` is Apple
+Vision under the hood, bundled into the framework; there is no separate engine artifact to
+add. The `samples/ios-app/UncialSample.xcodeproj` build phase that links the framework
+directly is for developing *inside this repository* — a real consumer always goes through
+the Swift package.
 
 ## Roadmap
 
