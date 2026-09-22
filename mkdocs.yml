@@ -9,10 +9,13 @@ docs_dir: docs
 
 theme:
   name: material
-  # The same mark the README carries. It is black, and the header is dark in both schemes,
-  # so docs/stylesheets/uncial.css inverts it to white -- see `.md-logo img`.
+  # The same mark the README carries, but with an alpha channel: the header is dark in both
+  # schemes, so docs/stylesheets/uncial.css paints the mark white with
+  # `brightness(0) invert(1)` -- see `.md-logo img`. That filter needs transparency; fed an
+  # opaque PNG it turns the whole square white. The favicon below is the opaque copy on
+  # purpose, so it stays visible on a dark tab bar.
   logo: img/img_logo.png
-  favicon: img/img_logo.png
+  favicon: img/favicon.png
   palette:
     # One palette for the SDK, not two: these schemes are the sample app's tokens
     # (docs/stylesheets/uncial.css), so the docs and the app look like one product.
