@@ -1,0 +1,190 @@
+/*
+ * Uncial docs theme.
+ *
+ * The palette is the sample app's, taken from
+ * samples/android-app/.../ui/source/theme/AppTheme.kt so there is one palette for the SDK
+ * rather than two: ink on cream, one ember accent, and a warm gradient that appears exactly
+ * once. Fraunces sets headings and Inter sets everything else, which is the same pairing the
+ * sample uses.
+ *
+ * Fraunces carries no Cyrillic. That is fine here because the documentation is English, and
+ * it is the reason the sample renders recognized Ukrainian text in a platform serif instead.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+/* ── Light: ink on cream ── */
+[data-md-color-scheme="uncial"] {
+  --uncial-ink:            #141210;
+  --uncial-ink-muted:      #4A433C;
+  --uncial-ink-subtle:     #8B8177;
+  --uncial-cream:          #F7F4ED;
+  --uncial-cream-deep:     #EFE9DE;
+  --uncial-paper:          #FFFDF9;
+  --uncial-line:           #E4DDD0;
+  --uncial-tan:            #DED2B8;
+  --uncial-ember:          #E2561F;
+  --uncial-peach:          #F6D7A9;
+
+  --md-default-bg-color:           var(--uncial-cream);
+  --md-default-fg-color:           var(--uncial-ink);
+  --md-default-fg-color--light:    var(--uncial-ink-muted);
+  --md-default-fg-color--lighter:  var(--uncial-ink-subtle);
+  --md-default-fg-color--lightest: var(--uncial-line);
+
+  --md-primary-fg-color:        var(--uncial-ink);
+  --md-primary-bg-color:        var(--uncial-cream);
+  --md-primary-bg-color--light: var(--uncial-tan);
+  --md-accent-fg-color:         var(--uncial-ember);
+
+  --md-typeset-color:        var(--uncial-ink);
+  --md-typeset-a-color:      var(--uncial-ember);
+  --md-typeset-mark-color:   var(--uncial-peach);
+  --md-typeset-table-color:  var(--uncial-line);
+
+  --md-code-bg-color:        var(--uncial-paper);
+  --md-code-fg-color:        var(--uncial-ink-muted);
+  --md-code-hl-string-color: #7A5C1E;
+  --md-code-hl-keyword-color: var(--uncial-ember);
+
+  --md-footer-bg-color:      var(--uncial-ink);
+  --md-footer-bg-color--dark: #0D0B0A;
+}
+
+/* ── Dark: the bottom stops of the sample's ember gradient ── */
+[data-md-color-scheme="uncial-dark"] {
+  --uncial-ink:            #F7F4ED;
+  --uncial-ink-muted:      #CFC4B6;
+  --uncial-ink-subtle:     #9A8C7E;
+  --uncial-cream:          #20110C;
+  --uncial-cream-deep:     #2A1A13;
+  --uncial-paper:          #2A1A13;
+  --uncial-line:           #3E2C23;
+  --uncial-tan:            #5A2A1B;
+  /* Ember at full saturation vibrates on a dark ground; the sample's amber does not. */
+  --uncial-ember:          #F5A33C;
+  --uncial-peach:          #5A2A1B;
+
+  --md-default-bg-color:           var(--uncial-cream);
+  --md-default-fg-color:           var(--uncial-ink);
+  --md-default-fg-color--light:    var(--uncial-ink-muted);
+  --md-default-fg-color--lighter:  var(--uncial-ink-subtle);
+  --md-default-fg-color--lightest: var(--uncial-line);
+
+  --md-primary-fg-color:        #180D09;
+  --md-primary-bg-color:        var(--uncial-ink);
+  --md-primary-bg-color--light: var(--uncial-ink-muted);
+  --md-accent-fg-color:         var(--uncial-ember);
+
+  --md-typeset-color:        var(--uncial-ink);
+  --md-typeset-a-color:      var(--uncial-ember);
+  --md-typeset-mark-color:   var(--uncial-tan);
+  --md-typeset-table-color:  var(--uncial-line);
+
+  --md-code-bg-color:        #180D09;
+  --md-code-fg-color:        var(--uncial-ink-muted);
+  --md-code-hl-string-color: #E7C486;
+  --md-code-hl-keyword-color: var(--uncial-ember);
+
+  --md-footer-bg-color:      #180D09;
+  --md-footer-bg-color--dark: #120907;
+}
+
+/* ── Type ── */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-header__title,
+.md-nav__title {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-size: 2.1rem;
+}
+
+/* A rule above every section, the way the sample separates its cards from the canvas. */
+.md-typeset h2 {
+  border-top: 1px solid var(--uncial-line);
+  padding-top: 0.9em;
+  margin-top: 1.9em;
+}
+
+/* ── Header: the sample's one loud surface, used once here too ── */
+.md-header {
+  background: linear-gradient(135deg, #DD6A2C 0%, #5A2A1B 58%, #20110C 100%);
+  color: #FFFDF9;
+}
+
+.md-tabs {
+  background: #20110C;
+}
+
+/* ── Surfaces ── */
+.md-typeset code {
+  background: var(--uncial-paper);
+  border: 1px solid var(--uncial-line);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+.md-typeset pre > code {
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--uncial-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--uncial-cream-deep);
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+.md-typeset blockquote {
+  border-left: 3px solid var(--uncial-ember);
+  color: var(--md-default-fg-color--light);
+}
+
+/* ── Admonitions: warnings carry the accent, notes stay quiet ── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 10px;
+  border-left-width: 3px;
+  box-shadow: none;
+  border: 1px solid var(--uncial-line);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset .admonition.danger {
+  border-left: 3px solid var(--uncial-ember);
+}
+
+.md-typeset .admonition.note,
+.md-typeset .admonition.tip {
+  border-left: 3px solid var(--uncial-tan);
+}
+
+/* ── Navigation ── */
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: var(--uncial-ember);
+}
+
+.md-search__form {
+  border-radius: 8px;
+}
+
+/* The project mark is a black glyph and the header is ink in both schemes, so paint it
+   white rather than shipping a second copy of the same logo. */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  filter: brightness(0) invert(1);
+}

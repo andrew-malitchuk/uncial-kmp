@@ -1,0 +1,2449 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="On-device OCR for Kotlin Multiplatform — PDFs and images to structured documents">
+      
+      
+      
+        <link rel="canonical" href="https://andrew-malitchuk.github.io/uncial-kmp/samples/">
+      
+      
+        <link rel="prev" href="../modules/build-logic/">
+      
+      
+        <link rel="next" href="../roadmap/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Samples - Uncial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/uncial.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="uncial" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#samples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Uncial" class="md-header__button md-logo" aria-label="Uncial" data-md-component="logo">
+      
+  <img src="../img/img_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Uncial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Samples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="uncial" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="uncial-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/andrew-malitchuk/uncial-kmp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    andrew-malitchuk/uncial-kmp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guide/input/" class="md-tabs__link">
+          
+  
+  
+  Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../platforms/capabilities/" class="md-tabs__link">
+          
+  
+  
+  Platforms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../architecture/overview/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../modules/model/" class="md-tabs__link">
+          
+  
+  
+  Modules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Samples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../roadmap/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Roadmap
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Uncial" class="md-nav__button md-logo" aria-label="Uncial" data-md-component="logo">
+      
+  <img src="../img/img_logo.png" alt="logo">
+
+    </a>
+    Uncial
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/andrew-malitchuk/uncial-kmp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    andrew-malitchuk/uncial-kmp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input — PDFs and Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/progress-and-cancellation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Progress and Cancellation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Document Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/coordinates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coordinates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing with the Fake Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platforms
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Platforms
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platforms/capabilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capabilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platforms/android/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platforms/ios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platforms/jvm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/engine-registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Engine Registry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/runtime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    runtime
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/raster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    raster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/pdf-text/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pdf-text
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/engine-tesseract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    engine-tesseract
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/engine-vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    engine-vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/engine-fake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    engine-fake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/lang-ukr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lang-ukr
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/lang-eng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lang-eng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/lang-download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lang-download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/ios-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ios-framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/build-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    build-logic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samples
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#samplescli-the-jvm-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        samples/cli — the JVM harness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="samples/cli — the JVM harness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-fixture-generates-an-image-only-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why fixture generates an image-only PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samplesandroid-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        samples/android-app
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="samples/android-app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#five-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Five screens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-design-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The design system
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-and-gallery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera and gallery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samplesios-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        samples/ios-app
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="samples/ios-app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-a-green-simulator-run-does-not-prove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a green Simulator run does not prove
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-same-five-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The same five screens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-and-gallery_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera and gallery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verified end to end
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#samplescli-the-jvm-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        samples/cli — the JVM harness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="samples/cli — the JVM harness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-fixture-generates-an-image-only-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why fixture generates an image-only PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samplesandroid-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        samples/android-app
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="samples/android-app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#five-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Five screens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-design-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The design system
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-and-gallery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera and gallery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samplesios-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        samples/ios-app
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="samples/ios-app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-a-green-simulator-run-does-not-prove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a green Simulator run does not prove
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-same-five-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The same five screens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-and-gallery_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera and gallery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verified end to end
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="samples">Samples<a class="headerlink" href="#samples" title="Permanent link">&para;</a></h1>
+<p>Three runnable consumers, one per platform. They are the reference for how Uncial is meant
+to be used — and, until publishing lands, the only verified way to consume it at all
+(see <a href="../getting-started/installation/">Installation</a>).</p>
+<p>All three offer the <strong>same three actions</strong>: the scanned fixture, the digital fixture, and a
+file picker. That symmetry is deliberate — it is the quickest way to re-check a change on a
+device.</p>
+<table>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Gradle path</th>
+<th>What it proves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLI</td>
+<td><code>:samples:cli</code></td>
+<td>JVM: PDFBox rasterizing, system <code>libtesseract</code> recognizing</td>
+</tr>
+<tr>
+<td>Android app</td>
+<td><code>:samples:android-app</code></td>
+<td>Android: <code>PdfRenderer</code>, Tesseract4Android, <code>androidx.startup</code>, R8</td>
+</tr>
+<tr>
+<td>iOS app</td>
+<td><em>(an Xcode project)</em></td>
+<td>iOS: PDFKit, Vision, the <code>Uncial.framework</code> umbrella</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="samplescli-the-jvm-harness"><code>samples/cli</code> — the JVM harness<a class="headerlink" href="#samplescli-the-jvm-harness" title="Permanent link">&para;</a></h2>
+<p>The only way to exercise recognition end to end on a developer machine, with no emulator
+and no device. It needs a <strong>system Tesseract</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>install<span class="w"> </span>tesseract<span class="w"> </span>tesseract-lang
+</code></pre></div>
+<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>:samples:cli:run<span class="w"> </span>--args<span class="o">=</span><span class="s2">&quot;capabilities&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./gradlew<span class="w"> </span>:samples:cli:run<span class="w"> </span>--args<span class="o">=</span><span class="s2">&quot;fixture /tmp/scan.pdf --pages 6&quot;</span><span class="w">        </span><span class="c1"># image-only PDF</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>./gradlew<span class="w"> </span>:samples:cli:run<span class="w"> </span>--args<span class="o">=</span><span class="s2">&quot;fixture /tmp/text.pdf --text --pages 2&quot;</span><span class="w"> </span><span class="c1"># with text layer</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>./gradlew<span class="w"> </span>:samples:cli:run<span class="w"> </span>--args<span class="o">=</span><span class="s2">&quot;ocr /tmp/scan.pdf --words&quot;</span>
+</code></pre></div>
+<ul>
+<li><strong><code>capabilities</code></strong> — reports the engine, its version, the languages it actually got, and
+  whether it can do word boxes, confidence, per-line language, orientation and skew. Exits
+  non-zero when no engine is available.</li>
+<li><strong><code>fixture &lt;out.pdf&gt; [--pages N]</code></strong> — generates a test document. See below.</li>
+<li><strong><code>ocr &lt;file.pdf&gt;</code></strong> — extracts and prints the document: source, page count, line count,
+  confidence range, per-language line counts, scripts, orientation, skew, elapsed time, and
+  then the reconstructed <code>Heading</code> / <code>Paragraph</code> structure. Flags: <code>--dpi N</code> (default 200),
+  <code>--words</code>, <code>--no-digital</code>, <code>--quiet</code>.</li>
+<li><strong><code>download &lt;file.pdf&gt; [--cache DIR]</code></strong> — the same as <code>ocr</code>, but fetches <code>.traineddata</code>
+  over the network into an empty cache instead of using the system Tesseract data. It is
+  what proves the runtime-download path of <a href="../language-data/">Language data</a>.</li>
+</ul>
+<p>Running with no arguments prints the usage text.</p>
+<h3 id="why-fixture-generates-an-image-only-pdf">Why <code>fixture</code> generates an image-only PDF<a class="headerlink" href="#why-fixture-generates-an-image-only-pdf" title="Permanent link">&para;</a></h3>
+<p><code>fixture</code> rasterizes its Ukrainian text into an image and puts <em>the image</em> into the PDF, so
+the document has no text layer at all.</p>
+<p>That is the whole point. A PDF generated the normal way carries its text, so Uncial takes
+the <strong>digital fast path</strong> and never touches an OCR engine — proving nothing about
+recognition. The scanned fixture produces the input the SDK actually exists for.</p>
+<p><code>--text</code> generates the opposite case: a PDF <strong>with</strong> a text layer, for checking that the
+fast path is taken and the engine never starts — the difference between milliseconds and
+seconds per page. Adding <code>--ascii</code> to that forces Helvetica and English text, giving a
+small, byte-stable PDF that does not depend on which fonts the machine has.</p>
+<p>The generated pages deliberately carry a large heading, a smaller subheading, ordinary body
+text, a repeated running header and a page number, so <code>DocumentStructure</code> has something
+real to reconstruct.</p>
+<hr />
+<h2 id="samplesandroid-app"><code>samples/android-app</code><a class="headerlink" href="#samplesandroid-app" title="Permanent link">&para;</a></h2>
+<p>A Compose app that runs the SDK on a real device. Note what it does <strong>not</strong> contain: no
+Uncial initialization, no engine selection, no <code>tessdata</code> copying. The Tesseract engine
+registers itself through <code>androidx.startup</code>, and the <code>uncial-lang-ukr</code> / <code>-eng</code> assets merge
+into the APK where the engine finds them.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>:samples:android-app:installDebug
+</code></pre></div>
+<p>The release build is the one that matters for shrinking:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>:samples:android-app:assembleRelease
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">R8 is only proved by a release build</p>
+<p><code>isMinifyEnabled = true</code> is on in the sample's release build type, and it is the only
+build that proves the consumer rules work. JNI entry points and <code>androidx.startup</code>
+providers are invisible to R8 and get stripped without the <code>consumer-rules/*.pro</code> each
+AAR carries.</p>
+</div>
+<h3 id="five-screens">Five screens<a class="headerlink" href="#five-screens" title="Permanent link">&para;</a></h3>
+<p>The sample is laid out as a small app rather than one screen of buttons, following
+<code>sample-app-design.html</code> in the repository root:</p>
+<table>
+<thead>
+<tr>
+<th>Screen</th>
+<th>What it proves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Welcome</strong></td>
+<td>The one screen that spends the gradient. Everything after it is paper, so the chrome never competes with recognized text.</td>
+</tr>
+<tr>
+<td><strong>Home</strong></td>
+<td>Every entry point the SDK has, with the code path named on the card: <code>OCR</code> for the image-only fixture, <code>fast path</code> for the one with a text layer, and the image row, which goes to <code>extractAsFlow(raster)</code> with no PDF involved.</td>
+</tr>
+<tr>
+<td><strong>Progress</strong></td>
+<td>Pages, because a page is what <code>extractAsFlow</code> emits and the granularity at which cancellation lands. The ring is indeterminate until <code>OcrProgress.Started</code> has said how many there are.</td>
+</tr>
+<tr>
+<td><strong>Document</strong></td>
+<td>Counts, per-page confidence, then the <code>DocBlock</code>s. Three views of one object, none of which is a string — a sample that printed <code>document.text</code> would prove nothing.</td>
+</tr>
+<tr>
+<td><strong>Device</strong></td>
+<td><code>UncialClient.capabilities</code>, row by row, with <code>no</code> written out rather than left blank.</td>
+</tr>
+</tbody>
+</table>
+<p>Two states are deliberately not errors. A page the engine gave no confidence for draws an
+empty bar (<code>not reported</code> is not <code>reported as zero</code> — a digital text layer does not guess),
+and a document with no lines gets a card explaining itself rather than a spinner or a
+failure.</p>
+<h3 id="the-design-system">The design system<a class="headerlink" href="#the-design-system" title="Permanent link">&para;</a></h3>
+<p><code>ui/</code> holds a small design system in the shape the sample borrows from
+<a href="https://github.com/andrew-malitchuk">bitshift-kmp</a>'s <code>presentation-core-ui</code>: token groups
+as data classes in <code>ui/core</code>, carried down by <code>staticCompositionLocalOf</code> and read through a
+single <code>Theme</code> accessor, with components under <code>ui/source/kit/atom</code> and
+<code>ui/source/kit/molecule</code>. No component names a colour or a size directly.</p>
+<p>Material3 is still underneath — <code>Scaffold</code> and <code>Snackbar</code> — so the <code>ColorScheme</code> is
+<strong>derived</strong> from the same tokens rather than living beside them. Leaving it at its defaults
+would put purple chrome around a warm paper palette.</p>
+<p>There is no tab bar. The screens form a stack: <code>Home</code> is the root, the device screen is one
+action in the top bar, a finished run is a <em>Last result</em> card on <code>Home</code>, and back (the
+gesture included, through <code>BackHandler</code>) returns there. On the progress screen back also
+cancels the run — leaving one going and unreachable would be the dishonest option.</p>
+<p>Fraunces and Inter are bundled in <code>res/font</code>. Inter is the Cyrillic subset, not the default
+Latin one: the sample's own copy is English, but a recognized line is not. Recognized text
+renders in the platform serif rather than Fraunces, which has no Cyrillic at all —
+<code>ui/source/theme/Fonts.kt</code> says so.</p>
+<p><code>StyleguideScreen</code> in <code>ui/source/showcase</code> renders the whole inventory into the preview
+pane. It is not reachable from the app; it exists so a token change can be judged against
+every component at once.</p>
+<h3 id="camera-and-gallery">Camera and gallery<a class="headerlink" href="#camera-and-gallery" title="Permanent link">&para;</a></h3>
+<p><code>core/image/</code> is where the sample's real image work lives, and it is all the part the SDK
+deliberately leaves to the app:</p>
+<ul>
+<li><strong>EXIF orientation.</strong> A camera writes the sensor's pixels and records the rotation in a
+  tag. <code>BitmapFactory</code> does not apply it and neither does Tesseract, so without this a
+  portrait photo recognizes as a sideways page — which under <code>PSM_AUTO</code> means no text at
+  all, not bad text.</li>
+<li><strong>A size cap.</strong> <code>OcrOptions.maxPageSide</code> guards the rasterizers, and a raster the caller
+  built never goes through one. <code>inSampleSize</code> brings the long side down to 2400 px without
+  ever materializing the full image.</li>
+<li><strong><code>FileProvider</code>.</strong> <code>TakePicture</code> needs somewhere to write, and a <code>file://</code> URI handed to
+  another app has been a <code>FileUriExposedException</code> since Nougat. The provider's paths are
+  scoped to one cache subdirectory rather than the whole cache.</li>
+<li><strong>A <code>&lt;queries&gt;</code> element.</strong> Since API 30 an app cannot see that a camera app exists without
+  declaring the intent it wants to resolve. Note what is <em>not</em> in the manifest:
+  <code>android.permission.CAMERA</code>. Launching another app's camera activity needs no permission,
+  and declaring it would make it required at install time for a capability this app never
+  uses directly.</li>
+</ul>
+<p>No <code>sourceDpi</code> is passed. Nobody rendered the photo at a known resolution, so Tesseract is
+told nothing and estimates — better than asserting a number that was never true.</p>
+<p>On hardware the scanned fixture runs 4 pages / 31 lines in roughly 2.3 s.</p>
+<hr />
+<h2 id="samplesios-app"><code>samples/ios-app</code><a class="headerlink" href="#samplesios-app" title="Permanent link">&para;</a></h2>
+<p>An <strong>Xcode project, not a Gradle module</strong> — there is no <code>:samples:ios-app</code> to invoke.</p>
+<p>Its first build phase runs Gradle to link <code>:dist:ios-framework</code> and stages
+<code>Uncial.framework</code> into <code>samples/ios-app/build/framework</code>, which is exactly where
+<code>FRAMEWORK_SEARCH_PATHS</code> points. So the search path needs no per-configuration conditionals
+and nothing has to be built by hand first.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>samples/ios-app
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>xcodebuild<span class="w"> </span>-project<span class="w"> </span>UncialSample.xcodeproj<span class="w"> </span>-scheme<span class="w"> </span>UncialSample<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>-sdk<span class="w"> </span>iphonesimulator<span class="w"> </span>-destination<span class="w"> </span><span class="s1">&#39;generic/platform=iOS Simulator&#39;</span><span class="w"> </span>build
+</code></pre></div>
+<p>Swapping in <code>-sdk iphoneos -destination 'generic/platform=iOS'</code> builds for a device. Both
+are verified.</p>
+<div class="admonition warning">
+<p class="admonition-title">Watch the disk</p>
+<p>Xcode's derived data is large and this build stages a whole static framework. Pass
+<code>-derivedDataPath</code> to keep it somewhere you control, and clean it up afterwards:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>xcodebuild<span class="w"> </span>-project<span class="w"> </span>UncialSample.xcodeproj<span class="w"> </span>-scheme<span class="w"> </span>UncialSample<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>-sdk<span class="w"> </span>iphonesimulator<span class="w"> </span>-destination<span class="w"> </span><span class="s1">&#39;generic/platform=iOS Simulator&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>-derivedDataPath<span class="w"> </span>/tmp/uncial-dd<span class="w"> </span>build
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/tmp/uncial-dd
+</code></pre></div>
+</div>
+<h3 id="signing">Signing<a class="headerlink" href="#signing" title="Permanent link">&para;</a></h3>
+<p><code>DEVELOPMENT_TEAM</code> is deliberately empty in the committed project — a team ID belongs to a
+person, not a repository. The simulator needs none. For a device, supply yours on the
+command line rather than committing it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>xcodebuild<span class="w"> </span>-project<span class="w"> </span>UncialSample.xcodeproj<span class="w"> </span>-scheme<span class="w"> </span>UncialSample<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>-sdk<span class="w"> </span>iphoneos<span class="w"> </span>-destination<span class="w"> </span><span class="s1">&#39;generic/platform=iOS&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nv">DEVELOPMENT_TEAM</span><span class="o">=</span>YOURTEAMID<span class="w"> </span>build
+</code></pre></div>
+<p>If you set it in Xcode instead, revert <code>project.pbxproj</code> before committing — Xcode writes
+the choice straight into the project file.</p>
+<h3 id="what-a-green-simulator-run-does-not-prove">What a green Simulator run does not prove<a class="headerlink" href="#what-a-green-simulator-run-does-not-prove" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Vision recognizes nothing on the Simulator</p>
+<p>There is no Neural Engine: <code>performRequests</code> succeeds, <code>error</code> is <code>nil</code>, and <code>results</code>
+is empty. The iOS tests therefore assert the pipeline and capabilities, and only check
+text when Vision returned some.</p>
+<p>On hardware this sample recognizes the bundled Ukrainian scan and reports <code>uk-UA+en-US</code>.
+Vision also has no Ukrainian before iOS 16, and the deployment target here is 15; where
+that bites, <code>UncialClient.capabilities</code> says so rather than hiding it.</p>
+</div>
+<h3 id="the-same-five-screens">The same five screens<a class="headerlink" href="#the-same-five-screens" title="Permanent link">&para;</a></h3>
+<p>The iOS sample carries the same design as the Android one — welcome, home, progress,
+result, device — and the same rule about navigation: a stack, no tab bar, <code>home</code> as the
+root, back to it. Nothing is shared between the two: SwiftUI and Compose have no common
+code, so the tokens (<code>Theme/Theme.swift</code>), the kit (<code>Kit/</code>) and the screens (<code>Screens/</code>)
+are written a second time from the same list of values. Fraunces and Inter are bundled in
+<code>Fonts/</code> and declared in <code>UIAppFonts</code>; recognized text uses the system serif, because
+Fraunces has no Cyrillic.</p>
+<p>Three things the SDK had to grow for this, all in <code>:dist:ios-framework</code>:</p>
+<ul>
+<li><strong><code>extract(client:pdf:onProgress:)</code></strong> — a Kotlin <code>Flow</code> does not export, so per-page
+  progress reaches Swift as a callback. It fires on whichever thread the pipeline is on;
+  the model hops to the main actor itself.</li>
+<li><strong><code>summarize(document:)</code></strong> — <code>Confidence</code> is a Kotlin value class over a <code>Float</code>, and
+  value classes do not survive Obj-C export in a form Swift can do arithmetic on. So the
+  counts and the per-page means are computed in Kotlin and handed over as
+  <code>UncialDocumentSummary</code>.</li>
+<li><strong><code>UncialRunProgress</code> / <code>UncialPageSummary</code></strong> — the plain types those two speak in.</li>
+</ul>
+<p>Both are exactly the kind of edge <code>:sdk:swift</code> (PLAN.md §6.3) exists to smooth over, which
+is why they live in the umbrella rather than in the app.</p>
+<h3 id="camera-and-gallery_1">Camera and gallery<a class="headerlink" href="#camera-and-gallery_1" title="Permanent link">&para;</a></h3>
+<p>The same two rows as the Android sample. <code>ImagePickers.swift</code> wraps two UIKit controllers
+for SwiftUI — <code>PHPickerViewController</code> for the library and <code>UIImagePickerController</code> for the
+camera — because as of iOS 15 there is no native SwiftUI camera at all, and <code>PhotosPicker</code>
+is iOS 16. The same deployment-target decision that costs this sample <code>NavigationStack</code>.</p>
+<p>The photo itself goes to <code>UncialBootstrap.extract(client:image:)</code>, which takes a <code>UIImage</code>
+rather than the <code>Raster(CGImageRef)</code> a Swift caller would otherwise have to build by hand:
+<code>CGImageRef</code> is a bare <code>CPointer</code> in Kotlin/Native and exports to Obj-C as an untyped
+pointer, so from Swift it would mean <code>Unmanaged.passUnretained(_:)</code> and hoping. That
+function also normalizes the image's orientation by redrawing it — Vision is handed the
+<code>CGImage</code>, which does not carry <code>imageOrientation</code>, so a camera photo would otherwise reach
+it sideways.</p>
+<p>Two permissions notes, which differ between the pickers: the library picker runs out of
+process and needs nothing, while the camera runs in-process and needs
+<code>NSCameraUsageDescription</code> in <code>Info.plist</code> — missing it is a crash on presentation, not a
+denied prompt. The Simulator has no camera, so that button is disabled there.</p>
+<p>The Swift side goes through <code>UncialBootstrap</code> rather than the raw Kotlin API — see the
+<a href="../getting-started/quick-start/#ios-from-swift">Quick start</a>.</p>
+<hr />
+<h2 id="verified-end-to-end">Verified end to end<a class="headerlink" href="#verified-end-to-end" title="Permanent link">&para;</a></h2>
+<p>Recognition has been run for real on all three platforms, not merely compiled:</p>
+<ul>
+<li><strong>JVM</strong> — <code>:samples:cli</code>, against a generated image-only Ukrainian PDF.</li>
+<li><strong>Android</strong> — the redesigned sample on a Pixel 8: the scanned fixture at 4 pages, 31
+  lines, 207 words, 95 % confidence in ~2.0 s; the digital fixture read from the text layer
+  in ~0.1 s; and the image path, via the photo picker, at 10 lines / 62 words / 92 %.</li>
+<li><strong>iOS</strong> — the redesigned sample on hardware, Vision reporting <code>uk-UA+en-US</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../modules/build-logic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: build-logic">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                build-logic
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../roadmap/" class="md-footer__link md-footer__link--next" aria-label="Next: Roadmap">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Roadmap
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/andrew-malitchuk/uncial-kmp" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
